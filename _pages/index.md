@@ -1,17 +1,15 @@
 ---
 layout: single
-title: "All About Chris"
+title: ""
 excerpt: "Homepage"
 author_profile: true
 permalink: /
 twitter: true
 ---
 
-Chris's research focuses on the development of computational multiscale models to
-investigate emergent system behaviors in biology.
-Using his training in both biochemistry and computer science, he develops and applies new algorithms and
-softwares to model and study the complexity of life.
-He is currently studying phenomena such as the regulation of synaptic plasticity and learning in dendritic spines.
+I am a doctoral student at the Department of Mechanical and Aerospace Engineering at University of California San Diego (UCSD).
+
+Prior to coming to UCSD, I have obtained an M.S.(Engg). degree from Jawaharlal Nehru Centre for Advanced Scientific Research (Bangalore, India) and a B.Tech. degree in Chemical Engineering from National Institute of Technology Karnataka Surathkal.
 
 <h1>Latest Posts</h1>
 {% assign sorted = site.posts | sort:'date' | reverse %}
