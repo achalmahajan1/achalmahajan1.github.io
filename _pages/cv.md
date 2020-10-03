@@ -17,44 +17,33 @@ classes: wide
 
 <h2>Work Experience</h2>
 * **2016-ongoing**: Graduate student researcher - Advisor: Prof. David Saintillan
-  * 
-* **2013-2016**: Graduate student
-  * Advisor: Prof Meheboob Alam
-  * Predictions of passive membrane permeability using physical properties estimated from molecular dynamics simulations.
-  * Developed workflows to enable spatially resolved cellular and
-    subcellular simulations of signaling cascades using real
-    geometries from electron microscopy.
-* **2011-2013**: Graduate Research Associate
-  * Linda Columbus and Cameron Mura Labs
-  * Experimentally characterized the biological function of a zinc
-    dependent glycerol dehydrogenase from <i>Thermotoga maritima</i>
-    using a variety of bespoke experimental assays.
-* **2010-2011**: Undergraduate Research Assistant
-  * Prof. Vidya K Shetty Lab
-  * Created the initial prototype of InterMol a molecular simulation structure,
-  	topology, and parameter conversion software.
+  * Leading a collaboration between 3 labs on a government operating grant worth $300k to build and
+test physical models to explain the phenomenon of chromatin organization inside the cell nucleus by
+using ideas of fuid-polymer dynamics that resulted in gaining new insight. In the process of preparing
+multiple first author publications to be submitted in leading journals.
+* Developed a highly scalable Stokes flow solver to understand the leading to a reduction in the simulation
+run time by 60%. As a direct result of my team's successes I was awarded additional computational
+time with the opportunity to work on a bigger project.
+* Performed analysis of multidimensional large content data sets using MATLAB and python; designed
+theoretical and computational models to capture experimental observations with Fortran and C system-
+atically scaled to run on a supercomputer by engaging with molecular biologists and mathematicians.
+* **2013-2016**: Graduate masters student- Advisor: Prof Meheboob Alam
+  * Led a successful research project towards developing computational tools to understand the role of
+  dissipation and rarefaction in hydrodynamics of granular flows resulting in a publication.
+  * Developed computational framework for 
+* **20-2011**: Undergraduate Research Assistant - Advisor: Prof. Vidya K Shetty
+  * Carried out experimental studies of oxygen mass transfer rate into a carboxyl methyl-cellulose (CMC)
+solution in a pulsating plate column.
+ * Investigated the effect of frequency of pulsation, amplitude of pulsation and velocity of air on volumetric
+mass transfer coefficient for oxygen into CMC solutions of different concentrations.
 
 <h2>Fellowships and Competitive Funding</h2>
-* **2019-2021**     Hartwell Foundation Postdoctoral Fellowship
-* **Spring 2018**   UCSD Chem/Biochem Distinguished Graduate Fellowship
-* **2017-18**       San Diego Diversity Fellowship
-* **2017**          Biophysical Society Travel Award <a href=
-"/assets/images/2017-Biophys_Travel.jpeg" rel="permalink"><i class="fas fa-link fa-sm" aria-hidden="true" title="permalink"></i></a>
-* **2017**          Simula Computational Physiology Scholarship <a href=
-"/assets/images/2017-SUURPh.jpeg" rel="permalink"><i class="fas fa-link fa-sm" aria-hidden="true" title="permalink"></i></a>
-* **2017**          NSF I-Corps, UCSD ($1k) Role: Co-PI
-* **2014-16**       Fellow, UCSD Molecular Biophysics Training Program
-* **2012**          UCSD SHORE Award
-* **Summer 2011**   NBCR Summer Institute Travel Award
-* **2011**          Mead Scholar, UVA Computational Biology
+* **2016-2019**     Jacobs Fellow, UCSD by Jacobs school of Engineering, Fall 2016
+* **Spring 2018**   Xsede research allocation ($)
+* **Summer 2011**   Travel grant, Deparmtent of Mechanical and Aerospace Engineering
+* **2013-2016** Junior Research Fellowship (JRF) scale by the Department of Science and Technology (DST), India
+* **Summer 2012** Summer Research Outreach Programme, Indian Institute of Science
 
 <h2>Honors & Awards</h2>
-* **2019**  Schmidt Science Fellows Finalist <a href=
-"/assets/images/2019-SchmidtScienceFellows.jpeg" rel="permalink"><i class="fas fa-link fa-sm" aria-hidden="true" title="permalink"></i></a>
-* **2017**  ACS CINF Scholarship for Scientific Excellence <a href=
-"/assets/images/2017-CINF.jpeg" rel="permalink"><i class="fas fa-link fa-sm" aria-hidden="true" title="permalink"></i></a>
-* **2017**  Bruno Zimm Award
-* **2017**  Carol & George Lattimer Award <a href=
-"/assets/images/2018-Lattimer.jpeg" rel="permalink"><i class="fas fa-link fa-sm" aria-hidden="true" title="permalink"></i></a>
-* **2015**  MBTG Annual Retreat Best Poster, UCSD
-* **2014**  Teaching Assistant Excellence Award, UCSD
+* **2019**  MAE Outstanding Teaching Assistant Award, Department of Mechanical and Aerospace Engineering, UCSD (2019).
+* **2017**  Best M.S. (Engg) Thesis Award in Engineering Mechanics (2015-2016, R. Narasimha Award), JNCASR.
