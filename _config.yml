@@ -249,7 +249,21 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
+    
+# Collections
+collections:
+  teaching:
+    output: false
+    permalink: /:collection/:path/
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: false
+    permalink: /:collection/:path/
+  inpreps:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -262,5 +276,36 @@ defaults:
       author_profile: true
       read_time: true
       comments: # true
+      share: false
+      related: false
+      
+# _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      share: false
+      related: false
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+      author_profile: true
+      read_time: true
       share: true
-      related: true
+      related: false
+  # _inpreps
+  - scope:
+      path: ""
+      type: inpreps
+    values:
+      layout: inprep
+      author_profile: true
+      read_time: true
+      share: false
+      related: false
