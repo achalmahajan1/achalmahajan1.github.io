@@ -11,13 +11,13 @@ classes: wide
 [PDF Version](https://drive.google.com/file/d/1LPJx0k7CLqru35XLSchfl-oqAx2EudOT/view?usp=sharing){: .btn .btn--inverse .btn--small}
 
 <h2>Education</h2>
-* **2021 (expected) **: Ph.D. Engineering Phys. \| _University of California, San Diego_
+* **2021 (expected)**: Ph.D. (Engineering Phys.) \| _University of California, San Diego_
 * **2016**: M.S. \| _Jawaharlal Nehru Center for Advanced Scientic Research_
 * **2013**: B.Tech. Chemical Engineering \| _National Institute of Technology Karnataka Surathkal of Virginia_
 
 <h2>Work Experience</h2>
-* **2016-ongoing**: Graduate student researcher
-  * Advisor: Prof. David Saintillan
+* **2016-ongoing**: Graduate student researcher - Advisor: Prof. David Saintillan
+  * 
 * **2013-2016**: Graduate student
   * Advisor: Prof Meheboob Alam
   * Predictions of passive membrane permeability using physical properties estimated from molecular dynamics simulations.
