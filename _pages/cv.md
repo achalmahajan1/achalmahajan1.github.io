@@ -11,15 +11,15 @@ classes: wide
 [PDF Version](https://drive.google.com/file/d/1LPJx0k7CLqru35XLSchfl-oqAx2EudOT/view?usp=sharing){: .btn .btn--inverse .btn--small}
 
 <h2>Education</h2>
-* **2019**: Ph.D. Chemistry \| _University of California, San Diego_
-* **2013**: M.S. Biochemistry \| _University of Virginia_
-* **2011**: B.S. Chemistry & B.A. Computer Science \| _University of Virginia_
+* **2021 (expected) **: Ph.D. Engineering Phys. \| _University of California, San Diego_
+* **2016**: M.S. \| _Jawaharlal Nehru Center for Advanced Scientic Research_
+* **2013**: B.Tech. Chemical Engineering \| _National Institute of Technology Karnataka Surathkal of Virginia_
 
 <h2>Work Experience</h2>
-* **2019-ongoing**: Hartwell Foundation Postdoctoral Fellow
-  * Padmini Rangamani and Michael J. Holst Labs
-* **2013-2019**: Graduate Research Associate
-  * Rommie E. Amaro and J. Andrew McCammon Labs
+* **2016-ongoing**: Graduate student researcher
+  * Advisor: Prof. David Saintillan
+* **2013-2016**: Graduate student
+  * Advisor: Prof Meheboob Alam
   * Predictions of passive membrane permeability using physical properties estimated from molecular dynamics simulations.
   * Developed workflows to enable spatially resolved cellular and
     subcellular simulations of signaling cascades using real
@@ -29,8 +29,8 @@ classes: wide
   * Experimentally characterized the biological function of a zinc
     dependent glycerol dehydrogenase from <i>Thermotoga maritima</i>
     using a variety of bespoke experimental assays.
-* **2010-2011**: Undergraduate Research Associate
-  * Michael Shirts Lab
+* **2010-2011**: Undergraduate Research Assistant
+  * Prof. Vidya K Shetty Lab
   * Created the initial prototype of InterMol a molecular simulation structure,
   	topology, and parameter conversion software.
 
