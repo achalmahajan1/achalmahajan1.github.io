@@ -31,7 +31,7 @@ atically scaled to run on a supercomputer by engaging with molecular biologists 
   * Led a successful research project towards developing computational tools to understand the role of
   dissipation and rarefaction in hydrodynamics of granular flows resulting in a publication.
   * Developed computational framework for 
-* **20-2011**: Undergraduate Research Assistant - Advisor: Prof. Vidya K Shetty
+* **2010-2011**: Undergraduate Research Assistant - Advisor: Prof. Vidya K Shetty
   * Carried out experimental studies of oxygen mass transfer rate into a carboxyl methyl-cellulose (CMC)
 solution in a pulsating plate column.
   * Investigated the effect of frequency of pulsation, amplitude of pulsation and velocity of air on volumetric
@@ -46,4 +46,4 @@ mass transfer coefficient for oxygen into CMC solutions of different concentrati
 
 <h2>Honors & Awards</h2>
 * **2019**  MAE Outstanding Teaching Assistant Award, Department of Mechanical and Aerospace Engineering, UCSD (2019).
-* **2017**  Best M.S. (Engg) Thesis Award in Engineering Mechanics (2015-2016, R. Narasimha Award), JNCASR.
+* **2013**  Best M.S. (Engg) Thesis Award in Engineering Mechanics (2015-2016, R. Narasimha Award), JNCASR.
