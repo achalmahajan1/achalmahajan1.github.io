@@ -21,10 +21,10 @@ classes: wide
 test physical models to explain the phenomenon of chromatin organization inside the cell nucleus by
 using ideas of fuid-polymer dynamics that resulted in gaining new insight. In the process of preparing
 multiple first author publications to be submitted in leading journals.
-* Developed a highly scalable Stokes flow solver to understand the leading to a reduction in the simulation
+  * Developed a highly scalable Stokes flow solver to understand the leading to a reduction in the simulation
 run time by 60%. As a direct result of my team's successes I was awarded additional computational
 time with the opportunity to work on a bigger project.
-* Performed analysis of multidimensional large content data sets using MATLAB and python; designed
+  * Performed analysis of multidimensional large content data sets using MATLAB and python; designed
 theoretical and computational models to capture experimental observations with Fortran and C system-
 atically scaled to run on a supercomputer by engaging with molecular biologists and mathematicians.
 * **2013-2016**: Graduate masters student- Advisor: Prof Meheboob Alam
@@ -34,7 +34,7 @@ atically scaled to run on a supercomputer by engaging with molecular biologists 
 * **20-2011**: Undergraduate Research Assistant - Advisor: Prof. Vidya K Shetty
   * Carried out experimental studies of oxygen mass transfer rate into a carboxyl methyl-cellulose (CMC)
 solution in a pulsating plate column.
- * Investigated the effect of frequency of pulsation, amplitude of pulsation and velocity of air on volumetric
+  * Investigated the effect of frequency of pulsation, amplitude of pulsation and velocity of air on volumetric
 mass transfer coefficient for oxygen into CMC solutions of different concentrations.
 
 <h2>Fellowships and Competitive Funding</h2>
