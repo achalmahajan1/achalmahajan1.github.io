@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "aqua" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
@@ -102,9 +102,6 @@ author:
     - label: "Google Scholar"
       icon: "ai ai-fw ai-google-scholar ai-lg"
       url: "https://scholar.google.com/citations?user=HD8PNBoAAAAJ&hl=en&oi=ao"
-    - label: "ORCID"
-      icon: "ai ai-fw ai-orcid ai-lg"
-      url: "https://orcid.org/0000-0002-0670-2308"
     - label: "GitHub"
       icon: "fab fa-fw fa-github fa-lg"
       url: "http://github.com/achalmahajan1"
@@ -197,7 +194,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
