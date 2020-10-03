@@ -51,9 +51,9 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+search                   : true # true, false (default)
+search_full_content      : false # true, false (default)
+search_provider          : lunr # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -96,49 +96,37 @@ author:
   name             : "Achal Mahajan"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+  location         : "UC San Diego"
+  email            : "acmahaja@eng.ucsd.edu"
+  links:      
+    - label: "Google Scholar"
+      icon: "ai ai-fw ai-google-scholar ai-lg"
+      url: "https://scholar.google.com/citations?user=HD8PNBoAAAAJ&hl=en&oi=ao"
+    - label: "ORCID"
+      icon: "ai ai-fw ai-orcid ai-lg"
+      url: "https://orcid.org/0000-0002-0670-2308"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      icon: "fab fa-fw fa-github fa-lg"
+      url: "http://github.com/achalmahajan1"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin fa-lg"
+      url: "https://www.linkedin.com/in/achal-mahajan-12864937/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square fa-lg"
+      url: "https://twitter.com/MAHAJANACHAL"      
 
 # Site Footer
 footer:
   links:
+    - label: "Google Scholar"
+      icon: "ai ai-fw ai-google-scholar ai-lg"
+      url: "https://scholar.google.com/citations?user=HD8PNBoAAAAJ&hl=en&oi=ao"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: "https://twitter.com/MAHAJANACHAL"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+      icon: "fab fa-fw fa-github fa-lg"
+      url: "http://github.com/achalmahajan1"
 
 
 # Reading Files
