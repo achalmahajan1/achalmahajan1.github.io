@@ -94,8 +94,8 @@ analytics:
 # Site Author
 author:
   name             : "Achal Mahajan"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  avatar           : "/assets/images/Achal.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Graduate PhD candidate; Jacobs fellow; David Saintillan's lab"
   location         : "UC San Diego"
   email            : "acmahaja@eng.ucsd.edu"
   links:      
