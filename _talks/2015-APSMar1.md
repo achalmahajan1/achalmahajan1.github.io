@@ -1,7 +1,7 @@
 ---
 title: "Active hydrodynamics of interphase chromatin: coarse-grained modeling and simulations"
 
-authors: '<b>David Saintillan </b>, Achal Mahajan, Michael J. Shelley and Alexandra Zidovska.'
+authors: '<b>David Saintillan</b>, Achal Mahajan, Michael J. Shelley and Alexandra Zidovska.'
 
 type: "talk"
 
