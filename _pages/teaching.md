@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Teaching Science Like We Do Science"
+title: "If you can’t explain it in simple terms, you don’t understand it well enough"
 permalink: /teaching/
 author_profile: true
 classes: wide
