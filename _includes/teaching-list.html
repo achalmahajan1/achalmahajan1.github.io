@@ -18,9 +18,8 @@
         <div class="archive__item-excerpt-head"><strong>{{ post.season }} {{ post.date | date : "%Y" }}</strong></div>
         <div class="archive__item-excerpt-tail">{{ post.type }}&mdash;<em>{{ post.title }}</em></div>
       </span>
-      <br/>
           {% if post.notes %}
-            <strong>*{{ post.notes }}</strong>
+            *{{ post.notes }}
           {% endif %}
     </li>
  </article>
