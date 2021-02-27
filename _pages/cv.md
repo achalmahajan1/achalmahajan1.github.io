@@ -51,14 +51,15 @@ solution in a pulsating plate column.
   * Investigated the effect of frequency of pulsation, amplitude of pulsation and velocity of air on volumetric
 mass transfer coefficient for oxygen into CMC solutions of different concentrations.
 
-<h2>Fellowships and Competitive Funding</h2>
-* **2016-2019**     Jacobs Fellow, UCSD by Jacobs school of Engineering, Fall 2016
-* **Spring 2018**   Xsede research allocation ($21; 698:20) on San Diego super computer (Comet) under the Xsede
-research allocation program funded by NSF.
-* **Summer 2011**   Travel grant, Deparmtent of Mechanical and Aerospace Engineering
-* **2013-2016** Junior Research Fellowship (JRF) scale by the Department of Science and Technology (DST), India
-* **Summer 2012** Summer Research Outreach Programme, Indian Institute of Science
+<h2>AWARDS AND ACHIEVEMENTS</h2>
 
-<h2>Honors & Awards</h2>
-* **2019**  MAE Outstanding Teaching Assistant Award, Department of Mechanical and Aerospace Engineering, UCSD (2019).
-* **2013**  Best M.S. (Engg) Thesis Award in Engineering Mechanics (2015-2016, R. Narasimha Award), JNCASR.
+* **2018-2020** Awarded service units (SUs) worth $21; 698:20 on San Diego Super Computer (Comet) under the Xsede
+research allocation program funded by National Science Foundation (NSF).
+* **2019** MAE Outstanding Teaching Assistant Award, Department of MAE, UCSD.
+* **2016** Jacobs Fellow, UCSD by Jacobs school of Engineering.
+* **2016** Best M.S. (Engg) Thesis Award in Engineering Mechanics (R. Narasimha Award).
+* **2013** Junior Research Fellowship (JRF) awarded for graduate studies in India.
+* **2012** Summer Research Outreach Programme fellowship by Indian Institute of Science (IISc), Bangalore as
+a scholarship to carry out three months of research.
+* **2007** Merit scholarship and best outgoing student award for outstanding performance in the All
+India Secondary School Examination (AISSE).
