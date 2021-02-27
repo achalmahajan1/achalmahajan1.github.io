@@ -30,8 +30,7 @@ evaluation and analysis of modeling data to address performance and reliability.
 hanced segregation of silent/active genomic regions by combining modeling and Hi-C data. 
   * Facilitated the research group in creating valuable tools to improve their computational and data workflow as the lab’s computational consultant. Maintained a 10k+ line simulation codebase capable of running in high performance computing environment.
   * Performed analysis of multidimensional large content data sets using MATLAB and python; designed
-theoretical and computational models to capture experimental observations with Fortran and C system-
-atically scaled to run on a supercomputer by engaging with molecular biologists and mathematicians.
+theoretical and computational models to capture experimental observations with Fortran and C systematically scaled to run on a supercomputer by engaging with molecular biologists and mathematicians.
 
 * **2013-2016**: Graduate masters student (Advisor: Prof. Meheboob Alam)
  Thesis: Two problems on granular flows - Poiseuille and Taylor-Couette flows
@@ -45,7 +44,7 @@ flow instabilities in different model configurations.
  Title : Rheological properties of soft walled tubes and flow transition at lower Reynolds number
   * An experimental setup was fabricated to study the transition of flow from laminar to turbulent through a viscoelastic micro channel.
   * Experiments were first to show that a flexible rectangular channel made of polydimethysiloxane (PDMS)
-induce an instability in the flow, and pushes the transition reynolds number to as low as ∼ 500.
+induce an instability in the flow, and pushes the transition reynolds number to as low as ~ 500.
   * Coupling between the fluid stresses and elastic stresses in the wall was found to be responsible for the
 onset of instabilities in the flow.
 * **2010-2011**: Undergraduate Research Assistant (Advisor: Prof. Vidya K Shetty)
