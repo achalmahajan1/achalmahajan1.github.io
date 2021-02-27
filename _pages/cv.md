@@ -25,7 +25,7 @@ test physical models to explain the phenomenon of chromatin organization inside 
 using ideas of fuid-polymer dynamics that resulted in gaining new insight. 
   * Developed and optimized computational pipeline to quantify the physical mechanism behind the en-
 hanced segregation of silent/active genomic regions by combining modeling and Hi-C data. 
- * Facilitated the research group in creating valuable tools to improve their computational and data workflow as the lab’s computational consultant. Maintained a 10k+ line simulation codebase equipped with high performance machinery.
+  * Facilitated the research group in creating valuable tools to improve their computational and data workflow as the lab’s computational consultant. Maintained a 10k+ line simulation codebase equipped with high performance machinery.
   * Performed analysis of multidimensional large content data sets using MATLAB and python; designed
 theoretical and computational models to capture experimental observations with Fortran and C system-
 atically scaled to run on a supercomputer by engaging with molecular biologists and mathematicians.
