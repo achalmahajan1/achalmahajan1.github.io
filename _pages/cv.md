@@ -33,19 +33,17 @@ atically scaled to run on a supercomputer by engaging with molecular biologists 
 * **2013-2016**: Graduate masters student (Advisor: Prof. Meheboob Alam)
  Thesis: Two problems on granular flows - Poiseuille and Taylor-Couette flows
   * Led a successful research project towards developing computational tools to understand the role of
-dissipation and rarefaction in hydrodynamics of granular 
-ows.
-* Managed two independent projects aimed at improving the theoretical understanding of granular 
+dissipation and rarefaction in hydrodynamics of granular flows.
+  * Managed two independent projects aimed at improving the theoretical understanding of granular 
 flow instabilities in different model configurations.
-* Performed analysis of multidimensional large content data sets using MATLAB and Python.
+  * Performed analysis of multidimensional large content data sets using MATLAB and Python.
 
 * **May 2012-July 2012**: Summer Internship, Dept. of Chemical Engineering, Indian Institute of Science, Bangalore (Supervisor Professor V. Kumaran)
  Title : Rheological properties of soft walled tubes and flow transition at lower Reynolds number
-* An experimental setup was fabricated to study the transition of flow from laminar to turbulent through
-a viscoelastic micro channel.
-* Experiments were first to show that a flexible rectangular channel made of polydimethysiloxane (PDMS)
+  * An experimental setup was fabricated to study the transition of flow from laminar to turbulent through a viscoelastic micro channel.
+  * Experiments were first to show that a flexible rectangular channel made of polydimethysiloxane (PDMS)
 induce an instability in the flow, and pushes the transition reynolds number to as low as ∼ 500.
-* Coupling between the fluid stresses and elastic stresses in the wall was found to be responsible for the
+  * Coupling between the fluid stresses and elastic stresses in the wall was found to be responsible for the
 onset of instabilities in the flow.
 * **2010-2011**: Undergraduate Research Assistant (Advisor: Prof. Vidya K Shetty)
   * Carried out experimental studies of oxygen mass transfer rate into a carboxyl methyl-cellulose (CMC)
