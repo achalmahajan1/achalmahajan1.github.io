@@ -21,11 +21,10 @@ classes: wide
   Dissertation : From nano to micro: activity-driven self-organization of interphase chromatin
   * Leading a collaboration between 3 labs on a government operating grant worth $300k to build and
 test physical models to explain the phenomenon of chromatin organization inside the cell nucleus by
-using ideas of fuid-polymer dynamics that resulted in gaining new insight. In the process of preparing
-multiple first author publications to be submitted in leading journals.
-  * Developed a highly scalable Stokes flow solver to understand the leading to a reduction in the simulation
-run time by 60%. As a direct result of my team's successes I was awarded additional computational
-time with the opportunity to work on a bigger project.
+using ideas of fuid-polymer dynamics that resulted in gaining new insight. 
+  * Developed and optimized computational pipeline to quantify the physical mechanism behind the en-
+hanced segregation of silent/active genomic regions by combining modeling and Hi-C data. 
+ * Facilitated the research group in creating valuable tools to improve their computational and data workflow as the lab’s computational consultant. Maintained a 10k+ line simulation codebase equipped with high performance machinery.
   * Performed analysis of multidimensional large content data sets using MATLAB and python; designed
 theoretical and computational models to capture experimental observations with Fortran and C system-
 atically scaled to run on a supercomputer by engaging with molecular biologists and mathematicians.
