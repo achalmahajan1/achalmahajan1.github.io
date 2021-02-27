@@ -20,9 +20,12 @@ classes: wide
 
 * **2016-ongoing**: Graduate student researcher (Advisor: Prof. David Saintillan)
   Dissertation : From nano to micro: activity-driven self-organization of interphase chromatin
-  * Leading a collaboration between 3 labs on a government operating grant worth $300k to build and
-test physical models to explain the phenomenon of chromatin organization inside the cell nucleus by
-using ideas of fuid-polymer dynamics that resulted in gaining new insight. 
+  * Technical project lead in computational biophysics for activity induced phase separation and coherent
+motion in interphase chromatin and DNA loop extrusion.
+  * Highly collaborative, and expertise in programming/data analysis resulted in 3 separate collaborations,
+each leading to co-authored publications in preparation.
+  * Creative problem solving skills and ability to plan and deliver with dedicated timelines. Organization,
+evaluation and analysis of modeling data to address performance and reliability.
   * Developed and optimized computational pipeline to quantify the physical mechanism behind the en-
 hanced segregation of silent/active genomic regions by combining modeling and Hi-C data. 
   * Facilitated the research group in creating valuable tools to improve their computational and data workflow as the lab’s computational consultant. Maintained a 10k+ line simulation codebase capable of running in high performance computing environment.
