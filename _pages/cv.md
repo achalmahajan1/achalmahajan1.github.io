@@ -9,7 +9,7 @@ classes: wide
 ---
 
 [PDF:Long Version](https://drive.google.com/file/d/1s6ccny89q8tg4Hj5qP1Q1OtdMJnd4mTE/view?usp=sharing){: .btn .btn--inverse .btn--small}
-[PDF:Short Version](https://drive.google.com/file/d/1hjJ0VRdVcbvRIReMXvFxUTnfQsKfcGz6/view?usp=sharing){: .btn .btn--inverse .btn--small}
+[PDF:Short Version](https://drive.google.com/file/d/1PAn-iX0LTCsofbQeFbrlLfbrIOFKlpog/view?usp=sharing){: .btn .btn--inverse .btn--small}
 
 <h2>Education</h2>
 * **July 2021 (expected)**: Ph.D. (Engineering Phys.) \| _University of California, San Diego_
