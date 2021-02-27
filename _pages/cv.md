@@ -17,6 +17,7 @@ classes: wide
 * **2013**: B.Tech. Chemical Engineering \| _National Institute of Technology Karnataka Surathkal_
 
 <h2>RESEARCH EXPERIENCE</h2>
+
 * **2016-ongoing**: Graduate student researcher (Advisor: Prof. David Saintillan)
   Dissertation : From nano to micro: activity-driven self-organization of interphase chromatin
   * Leading a collaboration between 3 labs on a government operating grant worth $300k to build and
