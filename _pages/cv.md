@@ -53,7 +53,7 @@ mass transfer coefficient for oxygen into CMC solutions of different concentrati
 
 <h2>AWARDS AND ACHIEVEMENTS</h2>
 
-* **2018-2020** Awarded service units (SUs) worth $21; 698:20 on San Diego Super Computer (Comet) under the Xsede
+* **2018-2020** Awarded service units (SUs) worth $21,698.20 on San Diego Super Computer (Comet) under the Xsede
 research allocation program funded by National Science Foundation (NSF).
 * **2019** MAE Outstanding Teaching Assistant Award, Department of MAE, UCSD.
 * **2016** Jacobs Fellow, UCSD by Jacobs school of Engineering.
