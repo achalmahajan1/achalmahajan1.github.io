@@ -28,6 +28,6 @@ Prior to coming to UCSD, I have obtained an M.S.(Engg). degree from Jawaharlal N
 	 </article>
 	</div>
 {% endfor %}
-<ul>
+<ul> 
 <a href="/blog/" class="back-to-top">More posts &rarr;</a>
 
