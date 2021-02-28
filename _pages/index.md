@@ -7,7 +7,9 @@ permalink: /
 twitter: true
 ---
 
-I am a doctoral student at the Department of Mechanical and Aerospace Engineering at University of California San Diego (UCSD).
+I am a computational biophysicist at the University of California San Diego, pursuing my PhD in engineering physics with 4+ years of experience in managing projects, leading research teams and scientific communication, and am looking for opportunities in biotech/pharma research and development.
+
+I leverage interdisciplinary skills including computational biology, statistical methods, next generation sequencing, applied mathematics and high performance computing to address a wide variety of complex biological problems.
 
 Prior to coming to UCSD, I have obtained an M.S.(Engg). degree from Jawaharlal Nehru Centre for Advanced Scientific Research (Bangalore, India) and a B.Tech. degree in Chemical Engineering from National Institute of Technology Karnataka Surathkal.
 
