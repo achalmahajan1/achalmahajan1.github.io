@@ -7,9 +7,9 @@ permalink: /
 twitter: true
 ---
 
-I am a computational biophysicist at the University of California San Diego, pursuing my PhD in engineering physics with 4+ years of experience in managing projects, leading research teams and scientific communication, and am looking for opportunities in biotech/pharma research and development.
+I am a computational biophysicist at the University of California San Diego, pursuing my PhD in engineering physics with 4+ years of experience in managing projects, leading research teams and scientific communication, and am looking for opportunities in research and development.
 
-I leverage interdisciplinary skills including computational biology, statistical methods, next generation sequencing, applied mathematics and high performance computing to address a wide variety of complex biological problems.
+I leverage interdisciplinary skills including computational biophysics, numerical analysis, algorithm development, applied mathematics, data science and high performance computing to address large scale complex biological problems.
 
 Prior to coming to UCSD, I have obtained an M.S.(Engg). degree from Jawaharlal Nehru Centre for Advanced Scientific Research (Bangalore, India) and a B.Tech. degree in Chemical Engineering from National Institute of Technology Karnataka Surathkal.
 
