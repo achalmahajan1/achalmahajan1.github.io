@@ -8,7 +8,7 @@ classes: wide
 
 <p><sup>&dagger;</sup> denotes joint authorship. <sup>$</sup> denotes corresponding author.
 {% if site.author.googlescholar %}
-  You can also find a more updated list on <a href="{{https://scholar.google.com/citations?user=HD8PNBoAAAAJ&hl=en&oi=ao}}">my Google Scholar profile</a>.
+  You can also find a more updated list on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.
 {% endif %}
 </p>
 [Sorted by year]({{ base_path }}by-year/){: .btn .btn--inverse .btn--small}
