@@ -7,8 +7,7 @@ permalink: /
 twitter: true
 ---
 
-I am a computational biophysicist at the University of California San Diego, pursuing my PhD in engineering physics with 4+ years of experience in managing projects, leading research teams and scientific communication. I am currently seeking opportunities to leverage technology, research, and/or management skills to
-innovate product development.
+I am a senior application engineer at MathWorks in the computational biology group focussed on Simbiology and bioinformatics. I am mostly interested in the intersection of biology, computation, modeling (statistical and first principle) and artifical intelligence. Before pivoting to industry, I had obtained a PhD at the University of California San Diego in computational biophysics to understand how genome organizes insid the cell. 
 
 I leverage interdisciplinary skills including computational biophysics, numerical analysis, algorithm development, applied mathematics, data science and high performance computing to address large scale complex biological problems.
 
