@@ -19,6 +19,5 @@ classes: wide
 
 <h2>Peer Reviewed and In Press</h2>
 * **On Knudsen-minimum effect and temperature bimodality in a dilute granular Poiseuille flow**
-C. Zhu, C. T. Lee, R. Ramamoorthi, and P. Rangamani$
 M. Alam, A. Mahajan and D. Shivanna
 **Status**: Journal of Fluid Mechanics    
