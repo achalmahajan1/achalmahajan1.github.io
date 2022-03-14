@@ -20,6 +20,7 @@ classes: wide
 * **2022-Current**: Senior Application Engineer/Scientist, MathWorks
 * 
 * **2016-2021 **: Graduate student researcher (Advisor: Prof. David Saintillan)
+
   # Dissertation : From nano to micro: activity-driven self-organization of interphase chromatin
   # * Technical project lead in computational biophysics for activity induced phase separation and coherent
 # motion in interphase chromatin and DNA loop extrusion.
@@ -34,6 +35,7 @@ classes: wide
 # theoretical and computational models to capture experimental observations with Fortran and C systematically scaled to run on a supercomputer by engaging with molecular biologists and mathematicians.
 
 * **2013-2016**: Graduate masters student (Advisor: Prof. Meheboob Alam)
+
  # Thesis: Two problems on granular flows - Poiseuille and Taylor-Couette flows
   # * Led a successful research project towards developing computational tools to understand the role of
 # dissipation and rarefaction in hydrodynamics of granular flows.
