@@ -1,18 +1,31 @@
 # main links
 main:
-   - title: "Publications"
-     url: /publications/
-    
-  # - title: "Codes"
-  #  url: /codes/
+  - title: "Publications"
+    url: /publications/
+  
   - title: "Talks"
     url: /talks/
-    
+
   - title: "Teaching"
     url: /teaching/
+    
+  #- title: "Codes"
+  #  url: /software/  
+
+  #- title: "Teaching"
+  #  url: /teaching/
+    
+  #- title: "Supervision"
+  #  url: /supervision/
+    
+  #- title: "Bayes"
+  #  url: /bayes/ 
+        
+  #- title: "Seminars"
+  #  url: /seminars/ 
     
   - title: "CV"
     url: /cv/
     
-  #- title: "Posts"
-  #  url: /blog/
+  #- title: "Contact"
+  #  url: /contact/
