@@ -19,7 +19,5 @@ classes: wide
 <h2>Work experience</h2>
 
 * **2022-Current**: Senior Application Engineer/Scientist, MathWorks
-* 
 * **2016-2021**: Graduate student researcher (Advisor: Prof. David Saintillan), \| _University of California, San Diego_
-* 
 * **2013-2016**: Graduate masters student (Advisor: Prof. Meheboob Alam), \| _Jawaharlal Nehru Center for Advanced Scientic Research_, _Bangalore_
