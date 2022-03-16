@@ -95,8 +95,8 @@ analytics:
 author:
   name             : "Achal Mahajan"
   avatar           : "/assets/images/Achal.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Graduate PhD candidate; Jacobs fellow; David Saintillan's lab"
-  location         : "UC San Diego"
+  bio              : "Senior Application Engineer, Computational Biology | Modeling and Simulation"
+  location         : "MathWorks"
   email            : "acmahaja@eng.ucsd.edu"
   links:      
     - label: "Google Scholar"
