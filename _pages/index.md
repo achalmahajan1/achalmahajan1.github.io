@@ -4,10 +4,10 @@ title: ""
 excerpt: "Homepage"
 author_profile: true
 permalink: /
-twitter: true
+twitter: false
 ---
 
-I am a senior application engineer at MathWorks in the computational biology group focussed on Simbiology and bioinformatics. I am mostly interested in the intersection of biology, computation, modeling (statistical and first principle) and artifical intelligence. Before pivoting to industry, I had obtained a PhD at the University of California San Diego in computational biophysics to understand how genome organizes insid the cell. 
+I am a senior application engineer at <a href="https://www.mathworks.com/">MathWorks</a> in the computational biology group focussed on Simbiology and bioinformatics. I am mostly interested in the intersection of biology, computation, modeling (statistical and first principle) and artifical intelligence. Before pivoting to industry, I had obtained a PhD at the University of California San Diego under the supervision of <a href="http://stokeslet.ucsd.edu/index.html">Prof. David Saintillan</a> in computational biophysics to understand how genome organizes insid the cell. 
 
 I leverage interdisciplinary skills including computational biophysics, numerical analysis, algorithm development, applied mathematics, data science and high performance computing to address large scale complex biological problems.
 
