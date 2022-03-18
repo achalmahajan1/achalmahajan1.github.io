@@ -31,3 +31,4 @@ Prior to coming to UCSD, I have obtained an M.S.(Engg). degree from Jawaharlal N
 <ul> 
 <a href="/blog/" class="back-to-top">More posts &rarr;</a>
 
+<a class="twitter-timeline" data-width="500" data-height="1000" href="https://twitter.com/MAHAJANACHAL">Tweets by MAHAJANACHAL</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
