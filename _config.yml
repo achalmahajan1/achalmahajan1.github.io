@@ -98,6 +98,7 @@ author:
   bio              : "Senior Application Engineer Computational Biology, Modeling and Simulation"
   location         : "MathWorks"
   email            : "acmahaja@eng.ucsd.edu"
+  googlescholar    : "https://scholar.google.se/citations?user=eD2hwhcAAAAJ&hl=en"
   links:      
     - label: "Google Scholar"
       icon: "ai ai-fw ai-google-scholar ai-lg"
