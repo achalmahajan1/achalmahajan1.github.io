@@ -3,6 +3,7 @@ title: ""
 excerpt: "Homepage"
 author_profile: true
 permalink: /
+classes: wide
 twitter: false
 ---
 
