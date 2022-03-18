@@ -1,5 +1,4 @@
 ---
-layout: single
 title: ""
 excerpt: "Homepage"
 author_profile: true
