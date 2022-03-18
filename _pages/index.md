@@ -5,6 +5,9 @@ author_profile: true
 permalink: /
 classes: wide
 twitter: false
+redirect_from: 
+  - /index/
+  - /index.html
 ---
 
 I am a senior application engineer at [MathWorks] (https://www.mathworks.com/)
