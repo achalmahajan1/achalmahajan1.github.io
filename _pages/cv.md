@@ -13,8 +13,8 @@ classes: wide
 
 <h2>Education</h2>
 * **2021**: Ph.D. (Engineering Phys.) \| _University of California, San Diego_
-* **2016**: M.S. \| _Jawaharlal Nehru Center for Advanced Scientic Research_, _Bangalore_
-* **2013**: B.Tech. Chemical Engineering \| _National Institute of Technology Karnataka Surathkal_
+* **2016**: M.S. (Engineering Mechanics) \| _Jawaharlal Nehru Center for Advanced Scientic Research_, _Bangalore_
+* **2013**: B.Tech. (Chemical Engineering) \| _National Institute of Technology Karnataka Surathkal_
 
 <h2>Work experience</h2>
 * **2022-Current**: Senior Application Engineer/Scientist, _MathWorks_
