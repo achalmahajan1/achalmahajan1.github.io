@@ -10,7 +10,7 @@ redirect_from:
   - /index.html
 ---
 
-I am a senior application engineer at <a href="https://www.mathworks.com/">MathWorks</a> in the computational biology group focussed on Simbiology and bioinformatics. I am mostly interested in the intersection of biology, computation, modeling (statistical and first principle) and artifical intelligence. Before pivoting to industry, I had obtained a PhD at the University of California San Diego under the supervision of <a href="http://stokeslet.ucsd.edu/index.html">Prof. David Saintillan</a> in computational biophysics to understand how genome organizes insid the cell. 
+I am a senior application engineer at <a href="https://www.mathworks.com/">MathWorks</a> in the computational biology group. I am mostly interested in the intersection of biology, computation, modeling (statistical and first principle) and artifical intelligence. Before pivoting to industry, I had obtained a PhD at the University of California San Diego under the supervision of <a href="http://stokeslet.ucsd.edu/index.html">Prof. David Saintillan</a> in computational biophysics to understand how genome organizes insid the cell. 
 
 Prior to coming to UCSD, I have obtained an M.S.(Engg). degree from Jawaharlal Nehru Centre for Advanced Scientific Research (Bangalore, India) under the supervision of <a href="https://www.jncasr.ac.in/faculty/meheboob/">Prof. Meheboob Alam</a> and a B.Tech. degree in Chemical Engineering from National Institute of Technology Karnataka Surathkal.
 
