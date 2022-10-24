@@ -18,6 +18,6 @@ classes: wide
 
 <h2>Work experience</h2>
 * **Oct 2022 - Current**: Scientist II, _Altos Labs_
-* **Jan 2022 - Sept 2022**: Senior Application Engineer/Scientist, _MathWorks_
+* **Jan 2022 - Sept 2022**: Senior Application Engineer, _MathWorks_
 * **2016 - 2021**: Graduate student researcher (Advisor: Prof. David Saintillan),  _University of California, San Diego_
 * **2013 - 2016**: Graduate masters student (Advisor: Prof. Meheboob Alam),  _Jawaharlal Nehru Center for Advanced Scientic Research_, _Bangalore_
