@@ -16,7 +16,5 @@ I am mostly interested in the intersection of biology, computation, modeling (st
 
 Prior to coming to UCSD, I have obtained an M.S.(Engg). degree from Jawaharlal Nehru Centre for Advanced Scientific Research (Bangalore, India) under the supervision of <a href="https://www.jncasr.ac.in/faculty/meheboob/">Prof. Meheboob Alam</a> and a B.Tech. degree in Chemical Engineering from National Institute of Technology Karnataka Surathkal.
 
-I leverage interdisciplinary skills including computational biophysics, numerical analysis, algorithm development, applied mathematics, data science and high performance computing to address large scale complex biological problems.
-
 
 <a class="twitter-timeline" data-width="500" data-height="1000" href="https://twitter.com/MAHAJANACHAL">Tweets by MAHAJANACHAL</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
