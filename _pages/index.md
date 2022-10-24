@@ -10,7 +10,7 @@ redirect_from:
   - /index.html
 ---
 
-I am a currently a scientist in the computational modeling group at Altos Labs. Before moving to Bay area, I had a short stint at <a href="https://www.mathworks.com/">MathWorks</a> as senior application engineer in the computational biology group. 
+I am a currently a scientist in the computational modeling group at Altos Labs. Before moving to Bay area, I had a short stint at <a href="https://www.mathworks.com/">MathWorks</a> as a senior application engineer in the computational biology group. 
 
 I am mostly interested in the intersection of biology, computation, modeling (statistical and first principle) and artifical intelligence. Before pivoting to industry, I had obtained a PhD at the University of California San Diego under the supervision of <a href="http://stokeslet.ucsd.edu/index.html">Prof. David Saintillan</a> in computational biophysics to understand how our genome organizes inside the nucleus of a cell. 
 
