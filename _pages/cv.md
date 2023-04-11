@@ -23,4 +23,4 @@ classes: wide
 * **2013 - 2016**: Graduate masters student,  _Jawaharlal Nehru Center for Advanced Scientic Research_, _Bangalore_
 
 <h2>Academic Service</h2>
-* **Reviewer**: - Physical Review Fluids (2022 - Present)
+* **Reviewer**: Physical Review Fluids (2022 - Present)
