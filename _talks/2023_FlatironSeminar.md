@@ -1,5 +1,5 @@
 ---
-title: "Activity in the nucleus enhances segregation and compaction of heterochromatin"
+title: "Chromatin compaction and segregation: Physical insight and relevance to aging"
 
 authors: '<b>Achal Mahajan</b>.'
 
