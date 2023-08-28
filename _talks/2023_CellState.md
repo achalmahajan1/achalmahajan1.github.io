@@ -1,5 +1,5 @@
 ---
-title: "Relationship Between Chromatin Structure and Transcript Abundance: Spatial Correlations and Long-Range Gene Regulation in the Human Genome"
+title: "Relationship between chromatin structure and transcript abundance: spatial correlations and long-range gene regulation in the human genome"
 
 authors: '<b>Achal Mahajan</b>, Francesca Ratti, Ban Wang, Hana El-Samad, James H Kaufman and Vishrawas Gopalakrishnan'
 
