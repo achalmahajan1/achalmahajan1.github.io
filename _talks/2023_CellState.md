@@ -1,15 +1,15 @@
 ---
-title: "Activity-enhanced phase separation in a model of interphase chromatin"
+title: "Relationship Between Chromatin Structure and Transcript Abundance: Spatial Correlations and Long-Range Gene Regulation in the Human Genome"
 
-authors: '<b>Achal Mahajan</b>, Wen Yan, Alexandra Zidovska, Michael J. Shelley and David Saintillan'
+authors: '<b>Achal Mahajan</b>, Francesca Ratti, Ban Wang, Hana El-Samad, James H Kaufman and Vishrawas Gopalakrishnan'
 
-type: "Talk"
-venue: "73rd Meeting APS Division of fluid dynamics (Virtual)"
+type: "Poster"
+venue: "Cell State Conversions"
 
-date: 2020-11-01
-location: "Chicago, Illinois"
+date: 2023-10-10
+location: "Cold Spring Harbor Laboratory, New York, USA"
 
 collection: talks
-permalink: /talks/2020-APSDFD
+permalink: /talks/2023_CellState
 ---
 
