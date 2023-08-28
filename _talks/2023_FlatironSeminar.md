@@ -1,14 +1,14 @@
 ---
 title: "Activity in the nucleus enhances segregation and compaction of heterochromatin"
 
-authors: '<b>Achal Mahajan</b>, Wen Yan, Alexandra Zidovska, David Saintillan and Michael J. Shelley.'
+authors: '<b>Achal Mahajan</b>.'
 
 type: "Talk"
-venue: "Department of Mechanical Engineering (Lab Seminar: Prof. Gwynn Elfring)"
+venue: "Center for Computational Biology (Invited Seminar: Prof. Michael J. Shelley)"
 
 date: 2022-11-04
-location: "University of British Columbia, Vancouver, Canada"
+location: "Flatiron Institute, New York, USA"
 
 collection: talks
-permalink: /talks/2021_UBCSeminar
+permalink: /talks/2023_FlatironSeminar
 ---
