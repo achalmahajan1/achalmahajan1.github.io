@@ -1,14 +1,14 @@
 ---
-title: "Chromatin compaction and segregation: Physical insight and relevance to aging"
+title: "Activity in the nucleus enhances segregation and compaction of heterochromatin"
 
-authors: '<b>Achal Mahajan</b>.'
+authors: '<b>Achal Mahajan</b>, Wen Yan, Alexandra Zidovska, David Saintillan and Michael J. Shelley.'
 
 type: "Talk"
-venue: "Center for Computational Biology (Invited Seminar: Prof. Michael J. Shelley)"
+venue: "Department of Mechanical Engineering (Lab Seminar: Prof. Gwynn Elfring)"
 
-date: 2023-06-13
-location: "Flatiron Institute, New York, USA"
+date: 2022-11-04
+location: "University of British Columbia, Vancouver, Canada"
 
 collection: talks
-permalink: /talks/2023_FlatironSeminar
+permalink: /talks/2021_UBCSeminar
 ---
