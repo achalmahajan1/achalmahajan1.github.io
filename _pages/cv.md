@@ -23,5 +23,5 @@ classes: wide
 * **2013 - 2016**: Graduate masters student,  _Jawaharlal Nehru Center for Advanced Scientic Research_, _Bangalore_
 
 <h2>Academic Service</h2>
-* **Reviewer**: Physical Review Fluids (2023), New Journal of Physics (2023), ACM-BCB (2023), IEEE-BIBM (2023), Scientific Reports (2023), NeurIPS-AI4D3 (2023), AAAI-W3PHIAI (2024), ISMB (2024)
+* **Reviewer**: Physical Review Fluids (2023), New Journal of Physics (2023), ACM-BCB (2023), IEEE-BIBM (2023, 2024), Scientific Reports (2023), NeurIPS-AI4D3 (2023), AAAI-W3PHIAI (2024), ISMB (2024)
 * **Program Chair**: IEEE-BIBM (2023, 2024), AAAI-W3PHIAI (2024), ISMB (2024)
