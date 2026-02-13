@@ -29,15 +29,24 @@ Prior to UCSD, I obtained an M.S.(Engg.) degree from Jawaharlal Nehru Centre for
 
 ## Recent News
 
-{% assign displayed_count = 0 %}
-{% for news in site.data.news %}
-  {% if news.text != nil and news.text != "" and displayed_count < 5 %}
-<div style="margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #e9ecef;">
-  <span style="color: #784e51; font-size: 0.85em; font-family: 'Barlow', sans-serif; font-weight: 400;">{{ news.date }}</span>
-  <div style="margin-top: 3px; font-family: 'Nunito Sans', sans-serif; font-weight: 300; color: #555; font-size: 0.95em; line-height: 1.5;">
-    {{ news.text | markdownify | remove: '<p>' | remove: '</p>' }}
+<div style="position: relative; padding-left: 28px; margin-top: 10px;">
+  <!-- Timeline vertical line -->
+  <div style="position: absolute; left: 5px; top: 6px; bottom: 0; width: 2px; background: #e9ecef;"></div>
+
+  {% assign displayed_count = 0 %}
+  {% for news in site.data.news %}
+    {% if news.text != nil and news.text != "" and displayed_count < 5 %}
+  <div style="position: relative; margin-bottom: 22px;">
+    <!-- Timeline dot -->
+    <div style="position: absolute; left: -27px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #784e51; border: 2px solid #fff; box-shadow: 0 0 0 2px #e9ecef;"></div>
+    <!-- Date -->
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82em; color: #784e51; margin-bottom: 2px;">{{ news.date }}</div>
+    <!-- Text -->
+    <div style="font-family: 'Nunito Sans', sans-serif; font-weight: 300; color: #555; font-size: 0.93em; line-height: 1.55;">
+      {{ news.text | markdownify | remove: '<p>' | remove: '</p>' }}
+    </div>
   </div>
+      {% assign displayed_count = displayed_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
 </div>
-    {% assign displayed_count = displayed_count | plus: 1 %}
-  {% endif %}
-{% endfor %}
