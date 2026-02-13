@@ -1,0 +1,118 @@
+# =============================================================================
+# Publications Data — Achal Mahajan
+# Each entry will be rendered automatically on the Publications page.
+# To add a new paper, copy an entry and fill in the fields.
+# Fields: title, authors, year, date, display (journal), doi, arxiv, pdf,
+#         abstract, thumbnail, highlight, status, invited
+# =============================================================================
+
+# ── Submitted / In Preparation ──────────────────────────────────────────────
+
+- title: "Macroscopic analyses of RNA-Seq data to reveal chromatin modifications in aging and disease"
+  authors: "**A. Mahajan**, F. Ratti, B. Wang, H. El-Samad, J. H. Kaufman and V. Gopalakrishnan"
+  year: "Submitted"
+  date: "2025-05-18"
+  display: "eLife"
+  display_extra: "(Reviewed Preprint)"
+  doi: "https://elifesciences.org/reviewed-preprints/107396"
+  status: "submitted"
+  thumbnail: ""
+  abstract: "Regulation of gene expression is fundamental for proper cellular function, and is constrained by the local chromatin environment of each gene, which varies spatially along the chromosome and is shaped by epigenetic modifications. Epigenetic modifications induce changes in the local chromatin structure, which can influence gene expression, by affecting the accessibility of DNA to transcription factors. Such changes are particularly relevant in aging and genetic disorders like Hutchinson-Gilford Progeria Syndrome (HGPS) and Werner Syndrome (WRN), where altered chromatin structure contributes to disease pathology. In this study, we analyze RNA-seq data using macroscopic metrics designed to be explicitly sensitive to chromatin modifications. The first metric, intra-chromosomal gene correlation length, measures spatial correlations in gene expressions along the chromosome. The second metric employs an energy landscape model based on the Arrhenius equation to estimate the energetic barriers associated with chromatin state transitions. We apply these metrics to various aging-related datasets, demonstrating their sensitivity to changes in the chromatin structure and the interpretability of the resulting outputs. The intra-chromosomal gene correlation length is particularly effective in quantifying changes in RNA-seq profiles due to increased chromatin accessibility during aging (and conversely, reduced accessibility due to treatment). This metric not only accurately distinguishes cell states, but also provides insight into the direction of aging. Together, these metrics provide robust screening tools that enhance our ability to exploit common measurements such as RNA-seq to derive new phenotypes such as chromatin dynamics on aging and disease."
+
+- title: "Multiscale Modeling Primer: Focus on Chromatin and Epigenetics"
+  authors: "**A. Mahajan**, E. Navarro, W. Poole and C. F. Lopez"
+  year: "Submitted"
+  date: "2025-04-05"
+  display: "Journal of Biological Chemistry"
+  doi: ""
+  arxiv: "https://arxiv.org/abs/2504.03876"
+  status: "submitted"
+  invited: true
+  thumbnail: ""
+  abstract: ""
+
+# ── 2025 ─────────────────────────────────────────────────────────────────────
+
+- title: "Semantic Information and Channel Capacity: A Unified Perspective for the Molecular Channel"
+  authors: "F. Ratti, B. A. Yang, C. Lagger, **A. Mahajan**, B. Wang, J. H. Kaufman, V. Gopalakrishnan and H. El-Samad"
+  year: 2025
+  date: "2025-01-01"
+  display: "IEEE Global Communications Conference"
+  doi: "https://ieeexplore.ieee.org/document/10901746/authors#authors"
+  status: "published"
+  thumbnail: ""
+  abstract: ""
+
+# ── 2023 ─────────────────────────────────────────────────────────────────────
+
+- title: "Chemomechanical model of sperm locomotion reveals two modes of swimming"
+  authors: "C. Li, B. Chakrabarti, P. Castilla, **A. Mahajan** and D. Saintillan"
+  year: 2023
+  date: "2023-11-01"
+  display: "Physical Review Fluids"
+  display_extra: "(Editor's suggestion)"
+  doi: "https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.8.113102"
+  status: "published"
+  thumbnail: ""
+  highlight: "In News: [UC San Diego Today](https://today.ucsd.edu/story/model-suggests-that-mammalian-sperm-cells-have-two-modes-of-swimming)"
+  abstract: "The propulsion of mammalian spermatozoa relies on the spontaneous periodic oscillation of their flagella. These oscillations are driven internally by the coordinated action of ATP-powered dynein motors that exert sliding forces between microtubule doublets, resulting in bending waves that propagate along the flagellum and enable locomotion. We present an integrated chemomechanical model of a freely swimming spermatozoon that uses a sliding-control model of the axoneme capturing the two-way feedback between motor kinetics and elastic deformations while accounting for detailed fluid mechanics around the moving cell. We develop a robust computational framework that solves a boundary integral equation for the passive sperm head alongside the slender-body equation for the deforming flagellum described as a geometrically nonlinear internally actuated Euler-Bernoulli beam, and captures full hydrodynamic interactions. Nonlinear simulations are shown to produce spontaneous oscillations with realistic beating patterns and trajectories, which we analyze as a function of sperm number and motor activity. Our results indicate that the swimming velocity does not vary monotonically with dynein activity, but instead displays two maxima corresponding to distinct modes of swimming, each characterized by qualitatively different waveforms and trajectories. Our model also provides an estimate for the efficiency of swimming, which peaks at low sperm number."
+
+# ── 2022 ─────────────────────────────────────────────────────────────────────
+
+- title: "Euchromatin activity enhances segregation and compaction of heterochromatin in the cell nucleus"
+  authors: "**A. Mahajan**, W. Yan, A. Zidovska, D. Saintillan and M. J. Shelley"
+  year: 2022
+  date: "2022-12-19"
+  display: "Physical Review X"
+  doi: "https://journals.aps.org/prx/abstract/10.1103/PhysRevX.12.041033"
+  status: "published"
+  thumbnail: ""
+  highlight: "In News: [phys.org](https://phys.org/news/2022-12-stresses-hydrodynamics-scientists-uncover-principles.html) · [ScienceDaily](https://www.sciencedaily.com/releases/2022/12/221219094934.htm)"
+  abstract: "The large-scale organization of the genome inside the cell nucleus is critical for the cell's function. Chromatin—the functional form of DNA in cells—serves as a template for active nuclear processes such as transcription, replication, and DNA repair. Chromatin's spatial organization directly affects its accessibility by ATP-powered enzymes, e.g., RNA polymerase II in the case of transcription. In differentiated cells, chromatin is spatially segregated into compartments—euchromatin and heterochromatin—the former being largely transcriptionally active and loosely packed, the latter containing mostly silent genes and densely compacted. The euchromatin-heterochromatin segregation is crucial for proper genomic function, yet the physical principles behind it are far from understood. Here, we model the nucleus as filled with hydrodynamically interacting active Zimm chains—chromosomes—and investigate how large heterochromatic regions form and segregate from euchromatin through their complex interactions. Each chromosome presents a block copolymer composed of heterochromatic blocks, capable of cross-linking that increases chromatin's local compaction, and euchromatic blocks, subjected to stochastic force dipoles that capture the microscopic stresses exerted by nuclear ATPases. These active stresses lead to a dynamic self-organization of the genome, with its coherent motions driving some mixing of chromosome territories as well as large-scale heterochromatic segregation through cross-linking of distant genomic regions. We study the stresses and flows that arise in the nucleus during the heterochromatic segregation and identify their signatures in Hi-C proximity maps. Our results reveal the fundamental role of active mechanical processes and hydrodynamic interactions in the kinetics of chromatin compartmentalization and in the emergent large-scale organization of the nucleus."
+
+- title: "Self-induced hydrodynamic coil-stretch transition of active polymers"
+  authors: "**A. Mahajan** and D. Saintillan"
+  year: 2022
+  date: "2022-01-01"
+  display: "Physical Review E"
+  doi: "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.105.014608"
+  status: "published"
+  thumbnail: ""
+  abstract: "We analyze the conformational dynamics and statistical properties of an active polymer model. The polymer is described as a freely jointed bead-rod chain subject to stochastic active force dipoles that act on the suspending solvent where they drive long-ranged fluid flows. Using Langevin simulations of isolated chains in unconfined domains, we show how the coupling of active flows with polymer conformations leads to emergent dynamics. Systems with contractile dipoles behave similarly to passive Brownian chains with enhanced fluctuations due to dipolar flows. In systems with extensile dipoles, however, our simulations uncover an active coil-stretch transition whereby the polymer spontaneously unfolds and stretches out in its own self-induced hydrodynamic flow, and we characterize this transition in terms of a dimensionless activity parameter comparing active dipolar forces to thermal fluctuations. We discuss our findings in the context of the classic coil-stretch transition of passive polymers in extensional flows and complement our simulations with a simple kinetic model for an active trimer."
+
+# ── 2015 ─────────────────────────────────────────────────────────────────────
+
+- title: "On Knudsen-minimum effect and temperature bimodality in a dilute granular Poiseuille flow"
+  authors: "M. Alam, **A. Mahajan** and D. Shivanna"
+  year: 2015
+  date: "2015-01-01"
+  display: "Journal of Fluid Mechanics"
+  doi: "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/abs/on-knudsenminimum-effect-and-temperature-bimodality-in-a-dilute-granular-poiseuille-flow/7AFC5869E39B2C93646D14C0E0A6A6B2"
+  status: "published"
+  thumbnail: ""
+  abstract: ""
+
+# ── Theses ───────────────────────────────────────────────────────────────────
+
+- title: "From nano to micro: activity-driven self-organization of interphase chromatin"
+  authors: "**Ph.D.** — University of California San Diego, 2021"
+  year: "Thesis"
+  date: "2021-06-01"
+  display: ""
+  doi: ""
+  pdf: "https://drive.google.com/file/d/15gqteb_ZbUaPpy9zL3fBQ0A40p5du3nH/view?usp=share_link"
+  status: "thesis"
+  thumbnail: ""
+  abstract: ""
+
+- title: "Two problems on driven granular matter: Poiseuille and Taylor-Couette flows"
+  authors: "**Masters** — Jawaharlal Nehru Centre for Advanced Scientific Research, 2016"
+  year: "Thesis"
+  date: "2016-06-01"
+  display: ""
+  doi: ""
+  pdf: "https://drive.google.com/file/d/1g2L0fXPU-j_D4lAJKOMr5RD8WQgTqtnV/view?usp=share_link"
+  status: "thesis"
+  thumbnail: ""
+  abstract: ""
+

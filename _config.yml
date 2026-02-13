@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Theme Settings
-minimal_mistakes_skin    : "academic" # custom warm bratochakra-inspired skin
+minimal_mistakes_skin    : "academic" # custom warm skin
 
 # Site Settings
 locale                   : "en-US"

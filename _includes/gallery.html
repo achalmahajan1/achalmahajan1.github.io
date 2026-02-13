@@ -1,0 +1,66 @@
+<!-- Research Gallery — auto-rotating image carousel -->
+<div class="research-gallery fade-in-section" id="research-gallery">
+  <div class="gallery-viewport">
+    {% for item in site.data.gallery %}
+    <div class="gallery-slide{% if forloop.first %} active{% endif %}">
+      {% if item.link %}<a href="{{ item.link }}">{% endif %}
+        <img src="{{ item.image }}" alt="{{ item.caption | default: 'Research figure' }}" loading="lazy"/>
+      {% if item.link %}</a>{% endif %}
+      {% if item.caption %}
+      <div class="gallery-caption">{{ item.caption }}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+  <!-- Dots -->
+  <div class="gallery-dots">
+    {% for item in site.data.gallery %}
+    <span class="gallery-dot{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index0 }}"></span>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+(function() {
+  var gallery = document.getElementById('research-gallery');
+  if (!gallery) return;
+
+  var slides = gallery.querySelectorAll('.gallery-slide');
+  var dots   = gallery.querySelectorAll('.gallery-dot');
+  if (slides.length <= 1) return;
+
+  var current  = 0;
+  var interval = null;
+  var DELAY    = 4000; // ms between slides
+
+  function show(idx) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { show(current + 1); }
+
+  function startAuto() {
+    if (interval) clearInterval(interval);
+    interval = setInterval(next, DELAY);
+  }
+
+  // Dot clicks
+  dots.forEach(function(d) {
+    d.addEventListener('click', function() {
+      show(parseInt(this.getAttribute('data-index'), 10));
+      startAuto(); // reset timer
+    });
+  });
+
+  // Pause on hover
+  gallery.addEventListener('mouseenter', function() { clearInterval(interval); });
+  gallery.addEventListener('mouseleave', startAuto);
+
+  startAuto();
+})();
+</script>
+

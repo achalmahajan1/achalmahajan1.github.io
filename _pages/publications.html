@@ -92,6 +92,10 @@ classes: wide
     background-color: var(--accent, #784e51);
     color: #fff !important;
   }
+  .pub-btn-arxiv {
+    background-color: #b31b1b;
+    color: #fff !important;
+  }
   .pub-btn-abstract {
     background-color: #e0e0e0;
     color: #333 !important;
@@ -101,16 +105,16 @@ classes: wide
     color: #ddd !important;
   }
 
-  /* ---- Abstract collapse ---- */
+  /* ---- Abstract collapse — scrollable fix ---- */
   .pub-abstract {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease, opacity 0.3s ease;
     opacity: 0;
     padding: 0 0;
   }
   .pub-abstract.open {
-    max-height: 600px;
+    max-height: 2000px;          /* generous ceiling for the CSS transition */
     opacity: 1;
     padding: 12px 0 4px 0;
   }
@@ -124,9 +128,28 @@ classes: wide
     border-left: 2px solid var(--border, #e9ecef);
     padding-left: 14px;
     margin-top: 4px;
+    max-height: 300px;           /* visible cap — scrolls beyond this */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+  /* Custom scrollbar for abstract */
+  .pub-abstract-text::-webkit-scrollbar {
+    width: 5px;
+  }
+  .pub-abstract-text::-webkit-scrollbar-track {
+    background: var(--bg-secondary, #f8f9fa);
+    border-radius: 3px;
+  }
+  .pub-abstract-text::-webkit-scrollbar-thumb {
+    background: var(--accent, #784e51);
+    border-radius: 3px;
+    opacity: 0.6;
+  }
+  .pub-abstract-text::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
   }
 
-  /* ---- News badges ---- */
+  /* ---- News / highlight badges ---- */
   .pub-news {
     display: inline-block;
     font-family: 'Nunito Sans', sans-serif;
@@ -150,6 +173,20 @@ classes: wide
     color: #7ab3f0 !important;
   }
 
+  .pub-badge-invited {
+    display: inline-block;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.78em;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #784e51, #a0696c);
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-left: 6px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+  }
+
   .pub-section-intro {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 0.92em;
@@ -170,15 +207,23 @@ classes: wide
   <span class="pub-number">7.</span>
   <span class="pub-title">Macroscopic analyses of RNA-Seq data to reveal chromatin modifications in aging and disease</span><br/>
   <span class="pub-authors"><b>A. Mahajan</b>, F. Ratti, B. Wang, H. El-Samad, J. H. Kaufman and V. Gopalakrishnan (2025)</span><br/>
-  <span class="pub-journal"><em>eLife</em></span><br/>
-  <a class="pub-btn pub-btn-preprint" href="#">SUBMITTED</a>
+  <span class="pub-journal"><em>eLife</em> (Reviewed Preprint)</span><br/>
+  <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-7')">ABSTRACT</button>
+  <a class="pub-btn pub-btn-doi" href="https://elifesciences.org/reviewed-preprints/107396" target="_blank">DOI</a>
+  <div id="abs-7" class="pub-abstract">
+    <div class="pub-abstract-text">
+      Regulation of gene expression is fundamental for proper cellular function, and is constrained by the local chromatin environment of each gene, which varies spatially along the chromosome and is shaped by epigenetic modifications. Epigenetic modifications induce changes in the local chromatin structure, which can influence gene expression, by affecting the accessibility of DNA to transcription factors. Such changes are particularly relevant in aging and genetic disorders like Hutchinson-Gilford Progeria Syndrome (HGPS) and Werner Syndrome (WRN), where altered chromatin structure contributes to disease pathology. In this study, we analyze RNA-seq data using macroscopic metrics designed to be explicitly sensitive to chromatin modifications. The first metric, intra-chromosomal gene correlation length, measures spatial correlations in gene expressions along the chromosome. The second metric employs an energy landscape model based on the Arrhenius equation to estimate the energetic barriers associated with chromatin state transitions. We apply these metrics to various aging-related datasets, demonstrating their sensitivity to changes in the chromatin structure and the interpretability of the resulting outputs. The intra-chromosomal gene correlation length is particularly effective in quantifying changes in RNA-seq profiles due to increased chromatin accessibility during aging (and conversely, reduced accessibility due to treatment). This metric not only accurately distinguishes cell states, but also provides insight into the direction of aging. For instance, our observations on the effects of anti-sense oligonucleotide (ASO) treatment align with the existing literature, demonstrating that ASO partially restores chromatin structure in diseased cells. They additionally quantify the more pronounced effects in HGPS compared to WRN. The barrier energy landscape further extends this capability by offering a framework for understanding the progressive degradation of the regulatory mechanisms. Together, these metrics provide robust screening tools that enhance our ability to exploit common measurements such as RNA-seq to derive new phenotypes such as chromatin dynamics on aging and disease, offering an alternative perspective that complements traditional analytical techniques and enriches our understanding of cellular states.
+    </div>
+  </div>
 </div>
 
 <div class="pub-entry fade-in-section">
   <span class="pub-number">6.</span>
-  <span class="pub-title">Multiscale Modeling Primer: Focus on Chromatin and Epigenetics</span><br/>
+  <span class="pub-title">Multiscale Modeling Primer: Focus on Chromatin and Epigenetics</span>
+  <span class="pub-badge-invited">Invited Review</span><br/>
   <span class="pub-authors"><b>A. Mahajan</b>, E. Navarro, W. Poole and C. F. Lopez (2025)</span><br/>
   <span class="pub-journal"><em>Journal of Biological Chemistry</em></span><br/>
+  <a class="pub-btn pub-btn-arxiv" href="https://arxiv.org/abs/2504.03876" target="_blank">ARXIV</a>
   <a class="pub-btn pub-btn-preprint" href="#">SUBMITTED</a>
 </div>
 
@@ -223,7 +268,7 @@ classes: wide
   <a class="pub-btn pub-btn-doi" href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.12.041033" target="_blank">DOI</a>
   <div id="abs-3" class="pub-abstract">
     <div class="pub-abstract-text">
-      The large-scale organization of the genome inside the cell nucleus is critical for the cell’s function. Chromatin—the functional form of DNA in cells—serves as a template for active nuclear processes such as transcription, replication, and DNA repair. Chromatin’s spatial organization directly affects its accessibility by ATP-powered enzymes, e.g., RNA polymerase II in the case of transcription. In differentiated cells, chromatin is spatially segregated into compartments—euchromatin and heterochromatin—the former being largely transcriptionally active and loosely packed, the latter containing mostly silent genes and densely compacted. The euchromatin-heterochromatin segregation is crucial for proper genomic function, yet the physical principles behind it are far from understood. Here, we model the nucleus as filled with hydrodynamically interacting active Zimm chains—chromosomes—and investigate how large heterochromatic regions form and segregate from euchromatin through their complex interactions. Each chromosome presents a block copolymer composed of heterochromatic blocks, capable of cross-linking that increases chromatin’s local compaction, and euchromatic blocks, subjected to stochastic force dipoles that capture the microscopic stresses exerted by nuclear ATPases. These active stresses lead to a dynamic self-organization of the genome, with its coherent motions driving some mixing of chromosome territories as well as large-scale heterochromatic segregation through cross-linking of distant genomic regions. We study the stresses and flows that arise in the nucleus during the heterochromatic segregation and identify their signatures in Hi-C proximity maps. Our results reveal the fundamental role of active mechanical processes and hydrodynamic interactions in the kinetics of chromatin compartmentalization and in the emergent large-scale organization of the nucleus.
+      The large-scale organization of the genome inside the cell nucleus is critical for the cell's function. Chromatin—the functional form of DNA in cells—serves as a template for active nuclear processes such as transcription, replication, and DNA repair. Chromatin's spatial organization directly affects its accessibility by ATP-powered enzymes, e.g., RNA polymerase II in the case of transcription. In differentiated cells, chromatin is spatially segregated into compartments—euchromatin and heterochromatin—the former being largely transcriptionally active and loosely packed, the latter containing mostly silent genes and densely compacted. The euchromatin-heterochromatin segregation is crucial for proper genomic function, yet the physical principles behind it are far from understood. Here, we model the nucleus as filled with hydrodynamically interacting active Zimm chains—chromosomes—and investigate how large heterochromatic regions form and segregate from euchromatin through their complex interactions. Each chromosome presents a block copolymer composed of heterochromatic blocks, capable of cross-linking that increases chromatin's local compaction, and euchromatic blocks, subjected to stochastic force dipoles that capture the microscopic stresses exerted by nuclear ATPases. These active stresses lead to a dynamic self-organization of the genome, with its coherent motions driving some mixing of chromosome territories as well as large-scale heterochromatic segregation through cross-linking of distant genomic regions. We study the stresses and flows that arise in the nucleus during the heterochromatic segregation and identify their signatures in Hi-C proximity maps. Our results reveal the fundamental role of active mechanical processes and hydrodynamic interactions in the kinetics of chromatin compartmentalization and in the emergent large-scale organization of the nucleus.
     </div>
   </div>
   <div><span class="pub-news">&#9733; In News: <a href="https://phys.org/news/2022-12-stresses-hydrodynamics-scientists-uncover-principles.html" target="_blank">phys.org</a> &middot; <a href="https://www.sciencedaily.com/releases/2022/12/221219094934.htm" target="_blank">ScienceDaily</a></span></div>
@@ -252,7 +297,6 @@ classes: wide
   <span class="pub-authors">M. Alam, <b>A. Mahajan</b> and D. Shivanna (2015)</span><br/>
   <span class="pub-journal"><em>Journal of Fluid Mechanics</em></span><br/>
   <a class="pub-btn pub-btn-doi" href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/abs/on-knudsenminimum-effect-and-temperature-bimodality-in-a-dilute-granular-poiseuille-flow/7AFC5869E39B2C93646D14C0E0A6A6B2" target="_blank">DOI</a>
-  <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-ID')"> </button>
 </div>
 
 <!-- ==================== THESES ==================== -->

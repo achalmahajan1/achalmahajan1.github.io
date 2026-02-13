@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#784e51;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#4a90e2;stop-opacity:0.08"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg3)"/>
+  <!-- Graph network -->
+  <!-- Central node -->
+  <circle cx="400" cy="190" r="18" fill="#784e51" opacity="0.35"/>
+  <!-- Surrounding nodes -->
+  <circle cx="300" cy="140" r="12" fill="#893636" opacity="0.3"/>
+  <circle cx="500" cy="140" r="12" fill="#893636" opacity="0.3"/>
+  <circle cx="280" cy="240" r="10" fill="#4a90e2" opacity="0.25"/>
+  <circle cx="520" cy="240" r="10" fill="#4a90e2" opacity="0.25"/>
+  <circle cx="340" cy="280" r="11" fill="#a0696c" opacity="0.28"/>
+  <circle cx="460" cy="280" r="11" fill="#a0696c" opacity="0.28"/>
+  <circle cx="240" cy="180" r="8" fill="#784e51" opacity="0.2"/>
+  <circle cx="560" cy="180" r="8" fill="#784e51" opacity="0.2"/>
+  <!-- Edges -->
+  <line x1="400" y1="190" x2="300" y2="140" stroke="#784e51" stroke-width="1.5" opacity="0.25"/>
+  <line x1="400" y1="190" x2="500" y2="140" stroke="#784e51" stroke-width="1.5" opacity="0.25"/>
+  <line x1="400" y1="190" x2="280" y2="240" stroke="#4a90e2" stroke-width="1.5" opacity="0.2"/>
+  <line x1="400" y1="190" x2="520" y2="240" stroke="#4a90e2" stroke-width="1.5" opacity="0.2"/>
+  <line x1="400" y1="190" x2="340" y2="280" stroke="#a0696c" stroke-width="1.5" opacity="0.2"/>
+  <line x1="400" y1="190" x2="460" y2="280" stroke="#a0696c" stroke-width="1.5" opacity="0.2"/>
+  <line x1="300" y1="140" x2="240" y2="180" stroke="#784e51" stroke-width="1" opacity="0.15"/>
+  <line x1="500" y1="140" x2="560" y2="180" stroke="#784e51" stroke-width="1" opacity="0.15"/>
+  <line x1="280" y1="240" x2="340" y2="280" stroke="#4a90e2" stroke-width="1" opacity="0.15"/>
+  <line x1="520" y1="240" x2="460" y2="280" stroke="#4a90e2" stroke-width="1" opacity="0.15"/>
+  <line x1="300" y1="140" x2="500" y2="140" stroke="#893636" stroke-width="1" opacity="0.15"/>
+  <!-- Drug molecule icon in center -->
+  <circle cx="400" cy="190" r="6" fill="#fff" opacity="0.6"/>
+  <text x="400" y="370" text-anchor="middle" font-family="'Nunito Sans', sans-serif" font-size="16" fill="#784e51" opacity="0.6">Graph-based ML for Drug Discovery</text>
+</svg>
+

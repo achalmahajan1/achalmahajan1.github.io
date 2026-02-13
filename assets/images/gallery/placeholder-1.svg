@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#784e51;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#893636;stop-opacity:0.08"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg1)"/>
+  <!-- Stylized nucleus -->
+  <circle cx="400" cy="200" r="120" fill="none" stroke="#784e51" stroke-width="2" opacity="0.4"/>
+  <circle cx="400" cy="200" r="80" fill="none" stroke="#893636" stroke-width="1.5" opacity="0.3"/>
+  <!-- Chromatin squiggles -->
+  <path d="M340 180 Q360 160 380 180 Q400 200 420 180 Q440 160 460 180" fill="none" stroke="#784e51" stroke-width="2.5" opacity="0.5"/>
+  <path d="M350 220 Q370 200 390 220 Q410 240 430 220 Q450 200 470 220" fill="none" stroke="#893636" stroke-width="2" opacity="0.4"/>
+  <path d="M330 200 Q350 180 370 200 Q390 220 410 200 Q430 180 450 200 Q470 220 490 200" fill="none" stroke="#a0696c" stroke-width="1.5" opacity="0.35"/>
+  <!-- Dots representing genes -->
+  <circle cx="360" cy="180" r="4" fill="#784e51" opacity="0.5"/>
+  <circle cx="400" cy="200" r="4" fill="#893636" opacity="0.5"/>
+  <circle cx="440" cy="180" r="4" fill="#784e51" opacity="0.5"/>
+  <circle cx="380" cy="220" r="4" fill="#893636" opacity="0.4"/>
+  <circle cx="420" cy="220" r="4" fill="#784e51" opacity="0.4"/>
+  <text x="400" y="360" text-anchor="middle" font-family="'Nunito Sans', sans-serif" font-size="16" fill="#784e51" opacity="0.6">Chromatin Organization</text>
+</svg>
+

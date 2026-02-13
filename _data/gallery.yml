@@ -1,0 +1,23 @@
+# =============================================================================
+# Research Gallery — rotating image carousel on the home page.
+# Add your research figures, schematics, or visualizations here.
+# Place images in /assets/images/gallery/ and reference them below.
+#
+# Fields:
+#   image   — path relative to site root (e.g. /assets/images/gallery/fig.png)
+#   caption — short description shown on hover (optional)
+#   link    — URL to link to when clicked (optional)
+# =============================================================================
+
+- image: "/assets/images/gallery/placeholder-1.svg"
+  caption: "Chromatin organization inside the cell nucleus"
+  link: "/publications/"
+
+- image: "/assets/images/gallery/placeholder-2.svg"
+  caption: "Multiscale modeling of biological systems"
+  link: "/publications/"
+
+- image: "/assets/images/gallery/placeholder-3.svg"
+  caption: "Graph-based ML for drug discovery"
+  link: "/publications/"
+
