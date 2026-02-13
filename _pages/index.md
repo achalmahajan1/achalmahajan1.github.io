@@ -21,6 +21,6 @@ Prior to UCSD, I obtained an M.S.(Engg.) degree from Jawaharlal Nehru Centre for
 
 - Computational biology and biophysics
 - Statistical and first-principle modeling
-- Machine learning for biological data
+- Graph based machine learning for drug discovery
 - Chromatin organization and gene regulation
 - Multiscale modeling
