@@ -35,7 +35,7 @@ Prior to UCSD, I obtained an M.S.(Engg.) degree from Jawaharlal Nehru Centre for
   <div class="research-card">
     <div class="research-card-icon">🤖</div>
     <h3 class="research-card-title">AI for Drug Discovery</h3>
-    <p class="research-card-desc">Graph-based machine learning and deep learning methods for molecular property prediction and therapeutic design.</p>
+    <p class="research-card-desc">Graph-based machine learning and deep learning methods for drug discovery.</p>
   </div>
   <div class="research-card">
     <div class="research-card-icon">🔬</div>

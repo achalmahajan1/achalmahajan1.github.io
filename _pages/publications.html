@@ -62,24 +62,30 @@ classes: wide
   .pub-row {
     display: flex;
     align-items: flex-start;
-    gap: 18px;
+    gap: 20px;
   }
   .pub-thumb {
     flex-shrink: 0;
-    width: 120px;
-    height: 90px;
+    width: 150px;
+    height: 110px;
     object-fit: cover;
     border-radius: 6px;
     border: 1px solid var(--border, #e9ecef);
     margin-top: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .pub-entry:hover .pub-thumb {
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(120, 78, 81, 0.15);
   }
   .pub-body {
     flex: 1;
     min-width: 0;
   }
   @media (max-width: 600px) {
-    .pub-row { flex-direction: column; gap: 10px; }
-    .pub-thumb { width: 100%; height: auto; max-height: 160px; }
+    .pub-row { flex-direction: column; gap: 12px; }
+    .pub-thumb { width: 100%; height: auto; max-height: 180px; }
   }
 
   /* ---- Buttons ---- */
