@@ -1,11 +1,164 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Talks and Presentations"
 permalink: /talks/
 author_profile: true
 classes: wide
 ---
 
-<ul class="archive__list">{% for post in site.talks reversed %}
-  {% include talk-list.html %}
-{% endfor %}</ul>
+<style>
+  .talks-timeline {
+    position: relative;
+    padding-left: 28px;
+    margin-top: 10px;
+  }
+  .talks-timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 6px;
+    bottom: 0;
+    width: 2px;
+    background: #e9ecef;
+  }
+  .talks-year-header {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    color: #999;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 18px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e9ecef;
+    position: relative;
+  }
+  .talks-year-header:first-child {
+    margin-top: 0;
+  }
+  .talk-item {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .talk-dot {
+    position: absolute;
+    left: -27px;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #784e51;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #e9ecef;
+  }
+  .talk-title {
+    font-family: 'Nunito Sans', 'Avenir Next', sans-serif;
+    font-weight: 600;
+    color: #893636;
+    font-size: 1.05em;
+    line-height: 1.4;
+  }
+  .talk-number {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    color: #999;
+    font-size: 0.95em;
+    margin-right: 4px;
+  }
+  .talk-meta {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    color: #555;
+    font-size: 0.92em;
+    margin-top: 3px;
+    line-height: 1.5;
+  }
+  .talk-badge {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 0.72em;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    margin-left: 8px;
+    position: relative;
+    top: -1px;
+  }
+  .talk-badge-talk {
+    background: #784e51;
+    color: #fff;
+  }
+  .talk-badge-poster {
+    background: #4a90e2;
+    color: #fff;
+  }
+  .talk-venue {
+    color: #333;
+  }
+  .talk-location {
+    color: #888;
+    font-style: italic;
+  }
+  .talk-authors {
+    color: #777;
+    font-size: 0.88em;
+    margin-top: 2px;
+  }
+</style>
+
+{% assign talks_sorted = site.talks | sort: "date" | reverse %}
+{% assign total_talks = talks_sorted | size %}
+{% assign talk_number = total_talks %}
+{% assign current_year = nil %}
+
+<div class="talks-timeline">
+{% for talk in talks_sorted %}
+  {% assign talk_year = talk.date | date: "%Y" %}
+
+  {% if talk_year != current_year %}
+    <div class="talks-year-header">{{ talk_year }}</div>
+    {% assign current_year = talk_year %}
+  {% endif %}
+
+  <div class="talk-item">
+    <div class="talk-dot"></div>
+    <div>
+      <span class="talk-number">{{ talk_number }}.</span>
+      <span class="talk-title">{{ talk.title }}</span>
+      {% assign type_lower = talk.type | downcase %}
+      {% if type_lower == "poster" %}
+        <span class="talk-badge talk-badge-poster">Poster</span>
+      {% else %}
+        <span class="talk-badge talk-badge-talk">Talk</span>
+      {% endif %}
+    </div>
+    <div class="talk-meta">
+      <i class="fas fa-map-marker-alt" style="color: #784e51; font-size: 0.85em;"></i>
+      <span class="talk-venue">{{ talk.venue }}</span>
+      {% if talk.location and talk.location != "Virtual" %}
+        &mdash; <span class="talk-location">{{ talk.location }}</span>
+      {% elsif talk.location == "Virtual" %}
+        &mdash; <span class="talk-location">Virtual</span>
+      {% endif %}
+      <br/>
+      <i class="fas fa-calendar-alt" style="color: #784e51; font-size: 0.85em;"></i>
+      {{ talk.date | date: "%B %Y" }}
+    </div>
+    {% if talk.authors %}
+    <div class="talk-authors">
+      <i class="fas fa-users" style="color: #aaa; font-size: 0.8em;"></i>
+      {{ talk.authors }}
+    </div>
+    {% endif %}
+    {% if talk.notes %}
+    <div class="talk-meta" style="color: #4a90e2; font-style: italic; margin-top: 2px;">
+      *{{ talk.notes }}
+    </div>
+    {% endif %}
+  </div>
+
+  {% assign talk_number = talk_number | minus: 1 %}
+{% endfor %}
+</div>
