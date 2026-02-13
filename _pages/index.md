@@ -24,3 +24,20 @@ Prior to UCSD, I obtained an M.S.(Engg.) degree from Jawaharlal Nehru Centre for
 - Graph based machine learning for drug discovery
 - Chromatin organization and gene regulation
 - Multiscale modeling
+
+---
+
+## Recent News
+
+{% assign displayed_count = 0 %}
+{% for news in site.data.news %}
+  {% if news.text != nil and news.text != "" and displayed_count < 5 %}
+<div style="margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #e9ecef;">
+  <span style="color: #784e51; font-size: 0.85em; font-family: 'Barlow', sans-serif; font-weight: 400;">{{ news.date }}</span>
+  <div style="margin-top: 3px; font-family: 'Nunito Sans', sans-serif; font-weight: 300; color: #555; font-size: 0.95em; line-height: 1.5;">
+    {{ news.text | markdownify | remove: '<p>' | remove: '</p>' }}
+  </div>
+</div>
+    {% assign displayed_count = displayed_count | plus: 1 %}
+  {% endif %}
+{% endfor %}
