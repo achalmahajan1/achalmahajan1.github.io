@@ -9,42 +9,42 @@ classes: wide
   .pub-year-header {
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
-    color: #999;
+    color: var(--text-muted, #999);
     font-size: 1.5em;
     margin-top: 35px;
     margin-bottom: 18px;
     padding-bottom: 5px;
-    border-bottom: 2px solid #e9ecef;
+    border-bottom: 2px solid var(--border, #e9ecef);
   }
   .pub-entry {
     margin-bottom: 18px;
     padding: 16px 18px;
-    border-left: 3px solid #784e51;
+    border-left: 3px solid var(--accent, #784e51);
     border-radius: 4px;
-    background: #fdfdfd;
+    background: var(--card-bg, #fdfdfd);
     transition: background 0.2s ease, box-shadow 0.2s ease;
   }
   .pub-entry:hover {
-    background: #f7f4f4;
-    box-shadow: 0 2px 8px rgba(120, 78, 81, 0.08);
+    background: var(--card-hover, #f7f4f4);
+    box-shadow: 0 2px 8px var(--card-shadow, rgba(120, 78, 81, 0.08));
   }
   .pub-number {
     font-family: 'Barlow', sans-serif;
     font-weight: 400;
-    color: #999;
+    color: var(--text-muted, #999);
     font-size: 1.05em;
     margin-right: 6px;
   }
   .pub-title {
     font-family: 'Nunito Sans', 'Avenir Next', sans-serif;
     font-weight: 600;
-    color: #893636;
+    color: var(--heading, #893636);
     font-size: 1.08em;
   }
   .pub-authors {
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
-    color: #555;
+    color: var(--text-light, #555);
     font-size: 0.95em;
     margin-top: 4px;
     display: inline-block;
@@ -52,11 +52,13 @@ classes: wide
   .pub-journal {
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
-    color: #666;
+    color: var(--text-muted, #666);
     font-size: 0.93em;
     display: inline-block;
     margin-bottom: 6px;
   }
+
+  /* ---- Buttons ---- */
   .pub-btn {
     display: inline-block;
     padding: 3px 10px;
@@ -70,11 +72,13 @@ classes: wide
     margin-top: 4px;
     text-decoration: none !important;
     border: none;
-    transition: opacity 0.2s ease;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.15s ease;
   }
   .pub-btn:hover {
     opacity: 0.85;
     text-decoration: none !important;
+    transform: translateY(-1px);
   }
   .pub-btn-doi {
     background-color: #4a90e2;
@@ -85,9 +89,44 @@ classes: wide
     color: #fff !important;
   }
   .pub-btn-preprint {
-    background-color: #784e51;
+    background-color: var(--accent, #784e51);
     color: #fff !important;
   }
+  .pub-btn-abstract {
+    background-color: #e0e0e0;
+    color: #333 !important;
+  }
+  [data-theme="dark"] .pub-btn-abstract {
+    background-color: #3a3a5a;
+    color: #ddd !important;
+  }
+
+  /* ---- Abstract collapse ---- */
+  .pub-abstract {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    padding: 0 0;
+  }
+  .pub-abstract.open {
+    max-height: 600px;
+    opacity: 1;
+    padding: 12px 0 4px 0;
+  }
+  .pub-abstract-text {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.88em;
+    line-height: 1.65;
+    color: var(--text-light, #555);
+    text-align: justify;
+    border-left: 2px solid var(--border, #e9ecef);
+    padding-left: 14px;
+    margin-top: 4px;
+  }
+
+  /* ---- News badges ---- */
   .pub-news {
     display: inline-block;
     font-family: 'Nunito Sans', sans-serif;
@@ -99,14 +138,22 @@ classes: wide
     padding: 4px 10px;
     border-radius: 12px;
   }
+  [data-theme="dark"] .pub-news {
+    background: #1e2a4a;
+    color: #7ab3f0;
+  }
   .pub-news a {
     color: #4a90e2 !important;
     text-decoration: underline;
   }
+  [data-theme="dark"] .pub-news a {
+    color: #7ab3f0 !important;
+  }
+
   .pub-section-intro {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 0.92em;
-    color: #666;
+    color: var(--text-muted, #666);
     margin-bottom: 1.2em;
   }
 </style>
@@ -119,7 +166,7 @@ classes: wide
 <!-- ==================== PREPRINTS ==================== -->
 <p class="pub-year-header">Submitted / In Preparation</p>
 
-<div class="pub-entry">
+<div class="pub-entry fade-in-section">
   <span class="pub-number">7.</span>
   <span class="pub-title">Macroscopic analyses of RNA-Seq data to reveal chromatin modifications in aging and disease</span><br/>
   <span class="pub-authors"><b>A. Mahajan</b>, F. Ratti, B. Wang, H. El-Samad, J. H. Kaufman and V. Gopalakrishnan (2025)</span><br/>
@@ -127,7 +174,7 @@ classes: wide
   <a class="pub-btn pub-btn-preprint" href="#">SUBMITTED</a>
 </div>
 
-<div class="pub-entry">
+<div class="pub-entry fade-in-section">
   <span class="pub-number">6.</span>
   <span class="pub-title">Multiscale Modeling Primer: Focus on Chromatin and Epigenetics</span><br/>
   <span class="pub-authors"><b>A. Mahajan</b>, E. Navarro, W. Poole and C. F. Lopez (2025)</span><br/>
@@ -138,7 +185,7 @@ classes: wide
 <!-- ==================== 2025 ==================== -->
 <p class="pub-year-header">2025</p>
 
-<div class="pub-entry">
+<div class="pub-entry fade-in-section">
   <span class="pub-number">5.</span>
   <span class="pub-title">Semantic Information and Channel Capacity: A Unified Perspective for the Molecular Channel</span><br/>
   <span class="pub-authors">F. Ratti, B. A. Yang, C. Lagger, <b>A. Mahajan</b>, B. Wang, J. H. Kaufman, V. Gopalakrishnan and H. El-Samad (2025)</span><br/>
@@ -149,39 +196,57 @@ classes: wide
 <!-- ==================== 2023 ==================== -->
 <p class="pub-year-header">2023</p>
 
-<div class="pub-entry">
+<div class="pub-entry fade-in-section">
   <span class="pub-number">4.</span>
   <span class="pub-title">Chemomechanical model of sperm locomotion reveals two modes of swimming</span><br/>
   <span class="pub-authors">C. Li, B. Chakrabarti, P. Castilla, <b>A. Mahajan</b> and D. Saintillan (2023)</span><br/>
   <span class="pub-journal"><em>Physical Review Fluids</em> (Editor's suggestion)</span><br/>
+  <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-4')">ABSTRACT</button>
   <a class="pub-btn pub-btn-doi" href="https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.8.113102" target="_blank">DOI</a>
+  <div id="abs-4" class="pub-abstract">
+    <div class="pub-abstract-text">
+      The propulsion of mammalian spermatozoa relies on the spontaneous periodic oscillation of their flagella. These oscillations are driven internally by the coordinated action of ATP-powered dynein motors that exert sliding forces between microtubule doublets, resulting in bending waves that propagate along the flagellum and enable locomotion. We present an integrated chemomechanical model of a freely swimming spermatozoon that uses a sliding-control model of the axoneme capturing the two-way feedback between motor kinetics and elastic deformations while accounting for detailed fluid mechanics around the moving cell. Nonlinear simulations are shown to produce spontaneous oscillations with realistic beating patterns and trajectories. Our results indicate that the swimming velocity does not vary monotonically with dynein activity, but instead displays two maxima corresponding to distinct modes of swimming, each characterized by qualitatively different wave forms and trajectories.
+    </div>
+  </div>
   <div><span class="pub-news">&#9733; In News: <a href="https://today.ucsd.edu/story/model-suggests-that-mammalian-sperm-cells-have-two-modes-of-swimming" target="_blank">UC San Diego Today</a></span></div>
 </div>
 
 <!-- ==================== 2022 ==================== -->
 <p class="pub-year-header">2022</p>
 
-<div class="pub-entry">
+<div class="pub-entry fade-in-section">
   <span class="pub-number">3.</span>
   <span class="pub-title">Euchromatin activity enhances segregation and compaction of heterochromatin in the cell nucleus</span><br/>
   <span class="pub-authors"><b>A. Mahajan</b>, W. Yan, A. Zidovska, D. Saintillan and M. J. Shelley (2022)</span><br/>
   <span class="pub-journal"><em>Physical Review X</em></span><br/>
+  <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-3')">ABSTRACT</button>
   <a class="pub-btn pub-btn-doi" href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.12.041033" target="_blank">DOI</a>
+  <div id="abs-3" class="pub-abstract">
+    <div class="pub-abstract-text">
+      The fruit fly genome, like that of most higher organisms, is organized into active euchromatin and repressive heterochromatin compartments. Using a coarse-grained computational model that accounts for the activity of the transcriptional machinery on euchromatin and its hydrodynamic interactions, we show that euchromatin activity alone is sufficient to drive the segregation and compaction of heterochromatin. The active stresses and flows generated by euchromatin dynamics create an effective pressure that pushes heterochromatin towards the nuclear periphery, consistent with the conventional nuclear architecture observed in most cell types.
+    </div>
+  </div>
   <div><span class="pub-news">&#9733; In News: <a href="https://phys.org/news/2022-12-stresses-hydrodynamics-scientists-uncover-principles.html" target="_blank">phys.org</a> &middot; <a href="https://www.sciencedaily.com/releases/2022/12/221219094934.htm" target="_blank">ScienceDaily</a></span></div>
 </div>
 
-<div class="pub-entry">
+<div class="pub-entry fade-in-section">
   <span class="pub-number">2.</span>
   <span class="pub-title">Self-induced hydrodynamic coil-stretch transition of active polymers</span><br/>
   <span class="pub-authors"><b>A. Mahajan</b> and D. Saintillan (2022)</span><br/>
   <span class="pub-journal"><em>Physical Review E</em></span><br/>
+  <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-2')">ABSTRACT</button>
   <a class="pub-btn pub-btn-doi" href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.105.014608" target="_blank">DOI</a>
+  <div id="abs-2" class="pub-abstract">
+    <div class="pub-abstract-text">
+      We model an active polymer whose monomers exert active dipolar forces on the surrounding fluid, and study its dynamics using Brownian dynamics simulations with hydrodynamic interactions. The interplay of activity and hydrodynamic coupling between monomers leads to a rich conformational dynamics, including a self-induced coil-stretch transition as a function of activity. This transition, which arises from the flow generated by the polymer itself, bears similarities to the classic coil-stretch transition of passive polymers in extensional flows.
+    </div>
+  </div>
 </div>
 
 <!-- ==================== 2015 ==================== -->
 <p class="pub-year-header">2015</p>
 
-<div class="pub-entry">
+<div class="pub-entry fade-in-section">
   <span class="pub-number">1.</span>
   <span class="pub-title">On Knudsen-minimum effect and temperature bimodality in a dilute granular Poiseuille flow</span><br/>
   <span class="pub-authors">M. Alam, <b>A. Mahajan</b> and D. Shivanna (2015)</span><br/>
@@ -192,14 +257,24 @@ classes: wide
 <!-- ==================== THESES ==================== -->
 <p class="pub-year-header">Thesis / Dissertations</p>
 
-<div class="pub-entry">
+<div class="pub-entry fade-in-section">
   <span class="pub-title">From nano to micro: activity-driven self-organization of interphase chromatin</span><br/>
   <span class="pub-authors"><b>Ph.D.</b> &mdash; University of California San Diego, 2021</span><br/>
   <a class="pub-btn pub-btn-pdf" href="https://drive.google.com/file/d/15gqteb_ZbUaPpy9zL3fBQ0A40p5du3nH/view?usp=share_link" target="_blank">PDF</a>
 </div>
 
-<div class="pub-entry">
+<div class="pub-entry fade-in-section">
   <span class="pub-title">Two problems on driven granular matter: Poiseuille and Taylor-Couette flows</span><br/>
   <span class="pub-authors"><b>Masters</b> &mdash; Jawaharlal Nehru Centre for Advanced Scientific Research, 2016</span><br/>
   <a class="pub-btn pub-btn-pdf" href="https://drive.google.com/file/d/1g2L0fXPU-j_D4lAJKOMr5RD8WQgTqtnV/view?usp=share_link" target="_blank">PDF</a>
 </div>
+
+<!-- ======== ABSTRACT TOGGLE SCRIPT ======== -->
+<script>
+function toggleAbstract(id) {
+  var el = document.getElementById(id);
+  if (el) {
+    el.classList.toggle('open');
+  }
+}
+</script>
