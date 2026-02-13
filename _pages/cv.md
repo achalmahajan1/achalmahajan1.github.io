@@ -25,15 +25,6 @@ classes: wide
 * **2013 - 2016**: Graduate Masters Student, _Jawaharlal Nehru Centre for Advanced Scientific Research_, _Bangalore_
 
 
-<h2><i class="fas fa-microphone-alt" style="color:#784e51; margin-right:8px;"></i>Selected Talks</h2>
-
-* **Invited Seminar** (Jun 2023): _Chromatin compaction and segregation: Physical insight and relevance to aging_ — Flatiron Institute, New York (hosted by Prof. Michael J. Shelley)
-* **Invited Seminar** (Nov 2022): _Activity in the nucleus enhances segregation and compaction of heterochromatin_ — University of British Columbia, Vancouver (hosted by Prof. Gwynn Elfring)
-* **Invited Seminar** (May 2022): _Activity in the nucleus enhances segregation and compaction of heterochromatin_ — Altos Labs
-* **Talk** (Nov 2021): _Hydrodynamics of DNA loop extrusion_ — 74th APS Division of Fluid Dynamics, Phoenix, AZ
-* **Talk** (Nov 2020): _Activity-enhanced phase separation in a model of interphase chromatin_ — 73rd APS Division of Fluid Dynamics (Virtual)
-* **Talk** (Nov 2019): _Hydrodynamics of interphase chromatin_ — 72nd APS Division of Fluid Dynamics, Seattle, WA
-
 <h2><i class="fas fa-chalkboard-teacher" style="color:#784e51; margin-right:8px;"></i>Academic Service</h2>
 
 * **Reviewer**: Physical Review Fluids (2023), New Journal of Physics (2023), ACM-BCB (2023), IEEE-BIBM (2023, 2024), Scientific Reports (2023), NeurIPS-AI4D3 (2023), AAAI-W3PHIAI (2024), ISMB (2024)
