@@ -1,5 +1,305 @@
 <!-- start custom head snippets -->
 
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<!-- Google Fonts: Nunito Sans (closest free match to bratochakra's Avenir) + Barlow for metadata -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- Academicons for Google Scholar icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+<style>
+  /* ============================================================
+     BRATOCHAKRA-INSPIRED STYLE for Minimal Mistakes
+     Palette: #784e51 (accent), #893636 (headings),
+     #f8f9fa (cards), #333 (text), #FFB6C1 (progress bar)
+     ============================================================ */
+
+  /* --- TYPOGRAPHY --- */
+  body,
+  .page__content,
+  .archive__item,
+  .sidebar,
+  .author__bio,
+  .page__meta,
+  .page__taxonomy {
+    font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+  }
+
+  .page__content {
+    font-size: 1.05em;
+    line-height: 1.75;
+  }
+
+  .page__content p {
+    text-align: justify;
+  }
+
+  /* --- HEADINGS — bratochakra maroon --- */
+  h1, h2, h3, h4, h5, h6,
+  .page__title,
+  .archive__item-title {
+    font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #893636;
+    font-weight: 600;
+  }
+
+  h2 {
+    padding-bottom: 0.35em;
+    border-bottom: 2px solid #e9ecef;
+    margin-top: 1.8em;
+  }
+
+  .page__content h2:first-child {
+    margin-top: 0;
+  }
+
+  h3 {
+    color: #784e51;
+  }
+
+  /* --- MASTHEAD / NAVIGATION --- */
+  .masthead {
+    background-color: #f8f9fa;
+    border-bottom: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    position: relative;
+  }
+
+  /* Progress bar (bratochakra signature) */
+  .masthead::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: var(--progress, 0%);
+    height: 3px;
+    background: #FFB6C1;
+    z-index: 1031;
+    transition: width 0.1s ease;
+  }
+
+  .greedy-nav {
+    background: transparent;
+  }
+
+  .greedy-nav a.site-title {
+    font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', sans-serif;
+    font-weight: 700;
+    color: #784e51;
+    font-size: 1.1em;
+  }
+
+  .greedy-nav .visible-links a {
+    font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', sans-serif;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .greedy-nav .visible-links a:hover {
+    color: #784e51;
+  }
+
+  /* Nav hover underline — bratochakra's signature effect */
+  .greedy-nav .visible-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #784e51;
+    transition: width 0.3s ease;
+  }
+
+  .greedy-nav .visible-links a:hover::after {
+    width: 100%;
+  }
+
+  /* --- ICONS — all maroon like bratochakra --- */
+  .author__urls .fas,
+  .author__urls .far,
+  .author__urls .fa,
+  .author__urls .fab,
+  .author__urls .ai,
+  .sidebar .fas,
+  .sidebar .far,
+  .sidebar .fa,
+  .sidebar .fab,
+  .sidebar .ai {
+    color: #784e51 !important;
+  }
+
+  /* Don't override footer or nav icons */
+  .page__footer .fas,
+  .page__footer .far,
+  .page__footer .fa,
+  .page__footer .fab,
+  .page__footer .ai {
+    color: inherit !important;
+  }
+
+  /* --- AUTHOR SIDEBAR --- */
+  .sidebar .author__name {
+    font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', sans-serif;
+    font-weight: 700;
+    color: #893636;
+    font-size: 1.1em;
+  }
+
+  .author__bio {
+    font-family: 'Nunito Sans', 'Avenir', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+
+  .author__avatar img {
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #f8f9fa !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .author__avatar img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .author__urls a {
+    color: #333;
+    transition: color 0.2s ease;
+    font-weight: 400;
+  }
+
+  .author__urls a:hover {
+    color: #784e51;
+  }
+
+  .sidebar .author__urls {
+    font-family: 'Nunito Sans', 'Avenir', sans-serif;
+  }
+
+  /* --- LINKS --- */
+  .page__content a:not(.btn) {
+    color: #893636;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+  }
+
+  .page__content a:not(.btn):hover {
+    border-bottom-color: #893636;
+  }
+
+  /* --- BUTTONS — warm maroon --- */
+  .btn--inverse {
+    background-color: #784e51;
+    color: #fff;
+    border-color: #784e51;
+    border-radius: 3px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn--inverse:hover {
+    background-color: #5e3c3e;
+    color: #fff;
+  }
+
+  /* --- PUBLICATION LIST --- */
+  .page__content li {
+    margin-bottom: 0.9em;
+    line-height: 1.65;
+    font-family: 'Nunito Sans', 'Avenir', sans-serif;
+  }
+
+  /* --- ARCHIVE / TALKS / TEACHING ITEMS --- */
+  .archive__item {
+    padding: 0.8em 0;
+    border-bottom: 1px solid #f0eeeb;
+  }
+
+  .archive__item:last-child {
+    border-bottom: none;
+  }
+
+  .archive__item-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #893636;
+  }
+
+  .archive__item-title a {
+    color: #893636;
+    text-decoration: none;
+  }
+
+  .archive__item-title a:hover {
+    color: #784e51;
+  }
+
+  .archive__item-excerpt {
+    font-family: 'Nunito Sans', 'Avenir Light', sans-serif;
+    font-weight: 300;
+    color: #555;
+  }
+
+  /* --- NOTICES — light gray like bratochakra cards --- */
+  .notice,
+  .notice--primary,
+  .notice--info {
+    background-color: #f8f9fa;
+    border-left: 4px solid #784e51;
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* --- SEARCH --- */
+  .search__toggle {
+    color: #784e51;
+  }
+
+  /* --- FOOTER --- */
+  .page__footer-copyright {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    font-size: 0.85em;
+  }
+
+  /* --- PAGE REFINEMENTS --- */
+  .page {
+    animation: fadeIn 0.4s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Sidebar — always fully visible, not faded */
+  .sidebar {
+    opacity: 1 !important;
+  }
+</style>
+
+<!-- Scroll progress bar script (bratochakra signature) -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+      var masthead = document.querySelector('.masthead');
+      if (!masthead) return;
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      masthead.style.setProperty('--progress', scrolled + '%');
+    });
+  });
+</script>
 
 <!-- end custom head snippets -->
