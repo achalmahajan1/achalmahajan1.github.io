@@ -29,7 +29,21 @@
   status: "submitted"
   invited: true
   thumbnail: ""
-  abstract: ""
+  abstract: "Essential life processes take place across multiple space and time scales in living organisms but understanding their mechanistic interactions remains an ongoing challenge. Advanced multiscale modeling techniques are providing new opportunities and insights into these complex processes. In cells, meters of chromatin are folded into a nucleus with a diameter on the order of microns. The three-dimensional chromatin structure coupled with biochemical processes that turn genes on or off, specify a given cell type through a complicated
+  set of interactions collectively referred to as “epigenetics”. Important epigenetic processes
+  include the differential accessibility of genomic loci to transcription factors and chemical
+  modifications to DNA and DNA-binding molecules such as histones. The dynamics of these
+  epigenetic processes span timescales from milliseconds to years. How do chemical
+  modifications consisting of a handful of atoms cooperate to modulate genome folding at the
+  scale of the nucleus and impact organism outcomes? In this review, we highlight the inherently
+  multiscale nature of chromatin organization, with a focus on computational modeling to bridge
+  the gaps in our understanding of biochemical processes across scales. We review relevant
+  chromatin biology, including major types of epigenetic modifications as well as the higher order
+  chromatin structures to present a multiscale view of chromatin. We also review relevant
+  computational methods to simulate chromatin structure, function, and dynamics, as well as
+  experimental techniques that inform and validate said models. Finally, we argue that multiscale
+  modeling provides a path forward towards understanding emergent behavior in this inherently
+  multiscale system."
 
 # ── 2025 ─────────────────────────────────────────────────────────────────────
 
@@ -41,7 +55,7 @@
   doi: "https://ieeexplore.ieee.org/document/10901746/authors#authors"
   status: "published"
   thumbnail: ""
-  abstract: ""
+  abstract: "Communication is essential for biological and technological systems alike. Generally, increasing the volume of transmitted information is a priority for communication systems design. However, what if communication in living systems, which are subject to energy and noise constraints, is reliant on efficiently communicating precise information as opposed to more information? This question motivates the concept of semantic information. This study explores the trade-off between maximizing information transfer versus selecting semantically important information transfer in Biomolecular Communication Channels (BioMC). Specifically, we assume that a biological system needs to receive information to survive. This defines a viability function. We assume that maximizing information transfer optimizes the viability function by providing the maximum information to the receiver. We also assume that reducing information exchange reduces resource consumption. With this formulation, we propose a data-driven algorithm that seeks a transmission strategy that optimizes the viability function while reducing the information exchange. We validate the proposed methodology on in-silico data. Overall, this study provides a new framework for investigating semantic information transfer in BioMC."
 
 # ── 2023 ─────────────────────────────────────────────────────────────────────
 
