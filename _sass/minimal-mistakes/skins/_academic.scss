@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Academic skin — bratochakra-inspired warm palette
+   ========================================================================== */
+
+/* Core colors — bratochakra palette */
+$background-color: #fff !default;
+$text-color: #333 !default;
+$muted-text-color: #666 !default;
+$primary-color: #784e51 !default;
+$border-color: #e9ecef !default;
+$footer-background-color: #3d3032 !default;
+$link-color: #893636 !default;
+$link-color-hover: darken(#893636, 10%) !default;
+$link-color-visited: #893636 !default;
+$masthead-link-color: #333 !default;
+$masthead-link-color-hover: #784e51 !default;
+$navicon-link-color-hover: mix(#fff, #333, 80%) !default;
+
+/* Footer */
+.page__footer {
+  color: #e0dcd8 !important;
+  background-color: #3d3032;
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+.page__footer a {
+  color: #e0dcd8;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+/* Masthead — clean with subtle shadow */
+.masthead {
+  background-color: #f8f9fa;
+  border-bottom: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
