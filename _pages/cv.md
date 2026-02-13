@@ -13,16 +13,64 @@ classes: wide
 
 <h2><i class="fas fa-graduation-cap" style="color:#784e51; margin-right:8px;"></i>Education</h2>
 
-* **2021**: Ph.D. (Engineering Physics) \| _University of California, San Diego_
-* **2016**: M.S. (Engineering Mechanics) \| _Jawaharlal Nehru Centre for Advanced Scientific Research_, _Bangalore_
-* **2013**: B.Tech. (Chemical Engineering) \| _National Institute of Technology Karnataka Surathkal_
+<div style="position: relative; padding-left: 28px; margin-top: 12px; margin-bottom: 8px;">
+  <div style="position: absolute; left: 5px; top: 6px; bottom: 0; width: 2px; background: #e9ecef;"></div>
+
+  <div style="position: relative; margin-bottom: 20px;">
+    <div style="position: absolute; left: -27px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #784e51; border: 2px solid #fff; box-shadow: 0 0 0 2px #e9ecef;"></div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82em; color: #784e51;">2021</div>
+    <div style="font-family: 'Nunito Sans', sans-serif; font-weight: 600; color: #333; font-size: 0.95em;">Ph.D. (Engineering Physics)</div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 300; color: #666; font-size: 0.9em; font-style: italic;">University of California, San Diego</div>
+  </div>
+
+  <div style="position: relative; margin-bottom: 20px;">
+    <div style="position: absolute; left: -27px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #784e51; border: 2px solid #fff; box-shadow: 0 0 0 2px #e9ecef;"></div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82em; color: #784e51;">2016</div>
+    <div style="font-family: 'Nunito Sans', sans-serif; font-weight: 600; color: #333; font-size: 0.95em;">M.S. (Engineering Mechanics)</div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 300; color: #666; font-size: 0.9em; font-style: italic;">Jawaharlal Nehru Centre for Advanced Scientific Research, Bangalore</div>
+  </div>
+
+  <div style="position: relative; margin-bottom: 10px;">
+    <div style="position: absolute; left: -27px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #784e51; border: 2px solid #fff; box-shadow: 0 0 0 2px #e9ecef;"></div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82em; color: #784e51;">2013</div>
+    <div style="font-family: 'Nunito Sans', sans-serif; font-weight: 600; color: #333; font-size: 0.95em;">B.Tech. (Chemical Engineering)</div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 300; color: #666; font-size: 0.9em; font-style: italic;">National Institute of Technology Karnataka Surathkal</div>
+  </div>
+</div>
 
 <h2><i class="fas fa-briefcase" style="color:#784e51; margin-right:8px;"></i>Work Experience</h2>
 
-* **Oct 2022 - Present**: Scientist II, _Altos Labs_
-* **Jan 2022 - Sept 2022**: Senior Application Engineer, _MathWorks_
-* **2016 - 2021**: Graduate Student Researcher, _University of California, San Diego_
-* **2013 - 2016**: Graduate Masters Student, _Jawaharlal Nehru Centre for Advanced Scientific Research_, _Bangalore_
+<div style="position: relative; padding-left: 28px; margin-top: 12px; margin-bottom: 8px;">
+  <div style="position: absolute; left: 5px; top: 6px; bottom: 0; width: 2px; background: #e9ecef;"></div>
+
+  <div style="position: relative; margin-bottom: 20px;">
+    <div style="position: absolute; left: -27px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #784e51; border: 2px solid #fff; box-shadow: 0 0 0 2px #e9ecef;"></div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82em; color: #784e51;">Oct 2022 – Present</div>
+    <div style="font-family: 'Nunito Sans', sans-serif; font-weight: 600; color: #333; font-size: 0.95em;">Scientist II</div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 300; color: #666; font-size: 0.9em; font-style: italic;">Altos Labs</div>
+  </div>
+
+  <div style="position: relative; margin-bottom: 20px;">
+    <div style="position: absolute; left: -27px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #784e51; border: 2px solid #fff; box-shadow: 0 0 0 2px #e9ecef;"></div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82em; color: #784e51;">Jan 2022 – Sept 2022</div>
+    <div style="font-family: 'Nunito Sans', sans-serif; font-weight: 600; color: #333; font-size: 0.95em;">Senior Application Engineer</div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 300; color: #666; font-size: 0.9em; font-style: italic;">MathWorks</div>
+  </div>
+
+  <div style="position: relative; margin-bottom: 20px;">
+    <div style="position: absolute; left: -27px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #784e51; border: 2px solid #fff; box-shadow: 0 0 0 2px #e9ecef;"></div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82em; color: #784e51;">2016 – 2021</div>
+    <div style="font-family: 'Nunito Sans', sans-serif; font-weight: 600; color: #333; font-size: 0.95em;">Graduate Student Researcher</div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 300; color: #666; font-size: 0.9em; font-style: italic;">University of California, San Diego</div>
+  </div>
+
+  <div style="position: relative; margin-bottom: 10px;">
+    <div style="position: absolute; left: -27px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: #784e51; border: 2px solid #fff; box-shadow: 0 0 0 2px #e9ecef;"></div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 400; font-size: 0.82em; color: #784e51;">2013 – 2016</div>
+    <div style="font-family: 'Nunito Sans', sans-serif; font-weight: 600; color: #333; font-size: 0.95em;">Graduate Masters Student</div>
+    <div style="font-family: 'Barlow', sans-serif; font-weight: 300; color: #666; font-size: 0.9em; font-style: italic;">Jawaharlal Nehru Centre for Advanced Scientific Research, Bangalore</div>
+  </div>
+</div>
 
 
 <h2><i class="fas fa-chalkboard-teacher" style="color:#784e51; margin-right:8px;"></i>Academic Service</h2>

@@ -289,11 +289,55 @@
   .sidebar {
     opacity: 1 !important;
   }
+
+  /* --- BACK TO TOP BUTTON --- */
+  #back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #784e51;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(120, 78, 81, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+    z-index: 1030;
+  }
+  #back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  #back-to-top:hover {
+    background: #5e3c3e;
+  }
 </style>
 
-<!-- Scroll progress bar script (bratochakra signature) -->
+<!-- Open Graph / Social Sharing Meta Tags -->
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ site.url }}{{ site.author.avatar }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@MAHAJANACHAL">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.author.avatar }}">
+
+<!-- Scroll progress bar + Back-to-top button -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Scroll progress bar
     window.addEventListener('scroll', function() {
       var masthead = document.querySelector('.masthead');
       if (!masthead) return;
@@ -301,7 +345,27 @@
       var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       var scrolled = height > 0 ? (winScroll / height) * 100 : 0;
       masthead.style.setProperty('--progress', scrolled + '%');
+
+      // Back to top visibility
+      var btn = document.getElementById('back-to-top');
+      if (btn) {
+        if (winScroll > 300) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+      }
     });
+
+    // Create back-to-top button
+    var btn = document.createElement('button');
+    btn.id = 'back-to-top';
+    btn.setAttribute('aria-label', 'Back to top');
+    btn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.body.appendChild(btn);
   });
 </script>
 
