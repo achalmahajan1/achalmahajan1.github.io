@@ -58,6 +58,30 @@ classes: wide
     margin-bottom: 6px;
   }
 
+  /* ---- Thumbnail ---- */
+  .pub-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .pub-thumb {
+    flex-shrink: 0;
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border, #e9ecef);
+    margin-top: 2px;
+  }
+  .pub-body {
+    flex: 1;
+    min-width: 0;
+  }
+  @media (max-width: 600px) {
+    .pub-row { flex-direction: column; gap: 10px; }
+    .pub-thumb { width: 100%; height: auto; max-height: 160px; }
+  }
+
   /* ---- Buttons ---- */
   .pub-btn {
     display: inline-block;
@@ -200,119 +224,162 @@ classes: wide
   <a href="https://scholar.google.com/citations?hl=en&user=HD8PNBoAAAAJ">Google Scholar</a>.
 </p>
 
-<!-- ==================== PREPRINTS ==================== -->
+{% comment %}
+  ──────────────────────────────────────────────────────────────
+  Build a paper counter (non-thesis entries only, reverse order)
+  ──────────────────────────────────────────────────────────────
+{% endcomment %}
+{% assign papers = site.data.publist | where_exp: "p", "p.status != 'thesis'" %}
+{% assign paper_count = papers | size %}
+
+{% comment %}
+  ──────────────────────────────────────────────────────────────
+  SECTION 1 — Submitted / In Preparation
+  ──────────────────────────────────────────────────────────────
+{% endcomment %}
+{% assign submitted = site.data.publist | where: "status", "submitted" %}
+{% if submitted.size > 0 %}
 <p class="pub-year-header">Submitted / In Preparation</p>
 
+{% for pub in submitted %}
+{% assign num = paper_count | minus: forloop.index0 %}
 <div class="pub-entry fade-in-section">
-  <span class="pub-number">7.</span>
-  <span class="pub-title">Macroscopic analyses of RNA-Seq data to reveal chromatin modifications in aging and disease</span><br/>
-  <span class="pub-authors"><b>A. Mahajan</b>, F. Ratti, B. Wang, H. El-Samad, J. H. Kaufman and V. Gopalakrishnan (2025)</span><br/>
-  <span class="pub-journal"><em>eLife</em> (Reviewed Preprint)</span><br/>
-  <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-7')">ABSTRACT</button>
-  <a class="pub-btn pub-btn-doi" href="https://elifesciences.org/reviewed-preprints/107396" target="_blank">DOI</a>
-  <div id="abs-7" class="pub-abstract">
-    <div class="pub-abstract-text">
-      Regulation of gene expression is fundamental for proper cellular function, and is constrained by the local chromatin environment of each gene, which varies spatially along the chromosome and is shaped by epigenetic modifications. Epigenetic modifications induce changes in the local chromatin structure, which can influence gene expression, by affecting the accessibility of DNA to transcription factors. Such changes are particularly relevant in aging and genetic disorders like Hutchinson-Gilford Progeria Syndrome (HGPS) and Werner Syndrome (WRN), where altered chromatin structure contributes to disease pathology. In this study, we analyze RNA-seq data using macroscopic metrics designed to be explicitly sensitive to chromatin modifications. The first metric, intra-chromosomal gene correlation length, measures spatial correlations in gene expressions along the chromosome. The second metric employs an energy landscape model based on the Arrhenius equation to estimate the energetic barriers associated with chromatin state transitions. We apply these metrics to various aging-related datasets, demonstrating their sensitivity to changes in the chromatin structure and the interpretability of the resulting outputs. The intra-chromosomal gene correlation length is particularly effective in quantifying changes in RNA-seq profiles due to increased chromatin accessibility during aging (and conversely, reduced accessibility due to treatment). This metric not only accurately distinguishes cell states, but also provides insight into the direction of aging. For instance, our observations on the effects of anti-sense oligonucleotide (ASO) treatment align with the existing literature, demonstrating that ASO partially restores chromatin structure in diseased cells. They additionally quantify the more pronounced effects in HGPS compared to WRN. The barrier energy landscape further extends this capability by offering a framework for understanding the progressive degradation of the regulatory mechanisms. Together, these metrics provide robust screening tools that enhance our ability to exploit common measurements such as RNA-seq to derive new phenotypes such as chromatin dynamics on aging and disease, offering an alternative perspective that complements traditional analytical techniques and enriches our understanding of cellular states.
+  <div class="pub-row">
+    {% if pub.thumbnail != "" and pub.thumbnail %}
+    <img class="pub-thumb" src="{{ pub.thumbnail }}" alt="{{ pub.title }}"/>
+    {% endif %}
+    <div class="pub-body">
+      <span class="pub-number">{{ num }}.</span>
+      <span class="pub-title">{{ pub.title }}</span>
+      {% if pub.invited %}<span class="pub-badge-invited">Invited Review</span>{% endif %}
+      <br/>
+      <span class="pub-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+      {% if pub.year %} ({{ pub.year }}){% endif %}</span><br/>
+      {% if pub.display != "" and pub.display %}
+      <span class="pub-journal"><em>{{ pub.display }}</em>{% if pub.display_extra %} {{ pub.display_extra }}{% endif %}</span><br/>
+      {% endif %}
+
+      {% if pub.abstract != "" and pub.abstract %}
+      <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-{{ num }}')">ABSTRACT</button>
+      {% endif %}
+      {% if pub.doi != "" and pub.doi %}
+      <a class="pub-btn pub-btn-doi" href="{{ pub.doi }}" target="_blank">DOI</a>
+      {% endif %}
+      {% if pub.arxiv != "" and pub.arxiv %}
+      <a class="pub-btn pub-btn-arxiv" href="{{ pub.arxiv }}" target="_blank">ARXIV</a>
+      {% endif %}
+      {% if pub.pdf != "" and pub.pdf %}
+      <a class="pub-btn pub-btn-pdf" href="{{ pub.pdf }}" target="_blank">PDF</a>
+      {% endif %}
+      {% if pub.status == "submitted" and pub.doi == "" and pub.arxiv == "" %}
+      <a class="pub-btn pub-btn-preprint" href="#">SUBMITTED</a>
+      {% endif %}
+
+      {% if pub.abstract != "" and pub.abstract %}
+      <div id="abs-{{ num }}" class="pub-abstract">
+        <div class="pub-abstract-text">{{ pub.abstract }}</div>
+      </div>
+      {% endif %}
+
+      {% if pub.highlight %}
+      <div><span class="pub-news">&#9733; {{ pub.highlight | markdownify | remove: '<p>' | remove: '</p>' }}</span></div>
+      {% endif %}
     </div>
   </div>
 </div>
+{% endfor %}
+{% endif %}
 
+{% comment %}
+  ──────────────────────────────────────────────────────────────
+  SECTION 2 — Published papers grouped by year (descending)
+  ──────────────────────────────────────────────────────────────
+{% endcomment %}
+{% assign published = site.data.publist | where: "status", "published" %}
+{% assign years = published | map: "year" | uniq | sort | reverse %}
+
+{% assign running_idx = submitted.size %}
+
+{% for yr in years %}
+<p class="pub-year-header">{{ yr }}</p>
+
+{% assign yr_papers = published | where: "year", yr %}
+{% for pub in yr_papers %}
+{% assign running_idx = running_idx | plus: 1 %}
+{% assign num = paper_count | minus: running_idx | plus: 1 %}
 <div class="pub-entry fade-in-section">
-  <span class="pub-number">6.</span>
-  <span class="pub-title">Multiscale Modeling Primer: Focus on Chromatin and Epigenetics</span>
-  <span class="pub-badge-invited">Invited Review</span><br/>
-  <span class="pub-authors"><b>A. Mahajan</b>, E. Navarro, W. Poole and C. F. Lopez (2025)</span><br/>
-  <span class="pub-journal"><em>Journal of Biological Chemistry</em></span><br/>
-  <a class="pub-btn pub-btn-arxiv" href="https://arxiv.org/abs/2504.03876" target="_blank">ARXIV</a>
-  <a class="pub-btn pub-btn-preprint" href="#">SUBMITTED</a>
-</div>
+  <div class="pub-row">
+    {% if pub.thumbnail != "" and pub.thumbnail %}
+    <img class="pub-thumb" src="{{ pub.thumbnail }}" alt="{{ pub.title }}"/>
+    {% endif %}
+    <div class="pub-body">
+      <span class="pub-number">{{ num }}.</span>
+      <span class="pub-title">{{ pub.title }}</span>
+      {% if pub.invited %}<span class="pub-badge-invited">Invited Review</span>{% endif %}
+      <br/>
+      <span class="pub-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+      {% if pub.year %} ({{ pub.year }}){% endif %}</span><br/>
+      {% if pub.display != "" and pub.display %}
+      <span class="pub-journal"><em>{{ pub.display }}</em>{% if pub.display_extra %} {{ pub.display_extra }}{% endif %}</span><br/>
+      {% endif %}
 
-<!-- ==================== 2025 ==================== -->
-<p class="pub-year-header">2025</p>
+      {% if pub.abstract != "" and pub.abstract %}
+      <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-{{ num }}')">ABSTRACT</button>
+      {% endif %}
+      {% if pub.doi != "" and pub.doi %}
+      <a class="pub-btn pub-btn-doi" href="{{ pub.doi }}" target="_blank">DOI</a>
+      {% endif %}
+      {% if pub.arxiv != "" and pub.arxiv %}
+      <a class="pub-btn pub-btn-arxiv" href="{{ pub.arxiv }}" target="_blank">ARXIV</a>
+      {% endif %}
+      {% if pub.pdf != "" and pub.pdf %}
+      <a class="pub-btn pub-btn-pdf" href="{{ pub.pdf }}" target="_blank">PDF</a>
+      {% endif %}
 
-<div class="pub-entry fade-in-section">
-  <span class="pub-number">5.</span>
-  <span class="pub-title">Semantic Information and Channel Capacity: A Unified Perspective for the Molecular Channel</span><br/>
-  <span class="pub-authors">F. Ratti, B. A. Yang, C. Lagger, <b>A. Mahajan</b>, B. Wang, J. H. Kaufman, V. Gopalakrishnan and H. El-Samad (2025)</span><br/>
-  <span class="pub-journal"><em>IEEE Global Communications Conference</em></span><br/>
-  <a class="pub-btn pub-btn-doi" href="https://ieeexplore.ieee.org/document/10901746/authors#authors" target="_blank">DOI</a>
-</div>
+      {% if pub.abstract != "" and pub.abstract %}
+      <div id="abs-{{ num }}" class="pub-abstract">
+        <div class="pub-abstract-text">{{ pub.abstract }}</div>
+      </div>
+      {% endif %}
 
-<!-- ==================== 2023 ==================== -->
-<p class="pub-year-header">2023</p>
-
-<div class="pub-entry fade-in-section">
-  <span class="pub-number">4.</span>
-  <span class="pub-title">Chemomechanical model of sperm locomotion reveals two modes of swimming</span><br/>
-  <span class="pub-authors">C. Li, B. Chakrabarti, P. Castilla, <b>A. Mahajan</b> and D. Saintillan (2023)</span><br/>
-  <span class="pub-journal"><em>Physical Review Fluids</em> (Editor's suggestion)</span><br/>
-  <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-4')">ABSTRACT</button>
-  <a class="pub-btn pub-btn-doi" href="https://journals.aps.org/prfluids/abstract/10.1103/PhysRevFluids.8.113102" target="_blank">DOI</a>
-  <div id="abs-4" class="pub-abstract">
-    <div class="pub-abstract-text">
-      The propulsion of mammalian spermatozoa relies on the spontaneous periodic oscillation of their flagella. These oscillations are driven internally by the coordinated action of ATP-powered dynein motors that exert sliding forces between microtubule doublets, resulting in bending waves that propagate along the flagellum and enable locomotion. We present an integrated chemomechanical model of a freely swimming spermatozoon that uses a sliding-control model of the axoneme capturing the two-way feedback between motor kinetics and elastic deformations while accounting for detailed fluid mechanics around the moving cell. We develop a robust computational framework that solves a boundary integral equation for the passive sperm head alongside the slender-body equation for the deforming flagellum described as a geometrically nonlinear internally actuated Euler-Bernoulli beam, and captures full hydrodynamic interactions. Nonlinear simulations are shown to produce spontaneous oscillations with realistic beating patterns and trajectories, which we analyze as a function of sperm number and motor activity. Our results indicate that the swimming velocity does not vary monotonically with dynein activity, but instead displays two maxima corresponding to distinct modes of swimming, each characterized by qualitatively different waveforms and trajectories. Our model also provides an estimate for the efficiency of swimming, which peaks at low sperm number.
-    </div>
-  </div>
-  <div><span class="pub-news">&#9733; In News: <a href="https://today.ucsd.edu/story/model-suggests-that-mammalian-sperm-cells-have-two-modes-of-swimming" target="_blank">UC San Diego Today</a></span></div>
-</div>
-
-<!-- ==================== 2022 ==================== -->
-<p class="pub-year-header">2022</p>
-
-<div class="pub-entry fade-in-section">
-  <span class="pub-number">3.</span>
-  <span class="pub-title">Euchromatin activity enhances segregation and compaction of heterochromatin in the cell nucleus</span><br/>
-  <span class="pub-authors"><b>A. Mahajan</b>, W. Yan, A. Zidovska, D. Saintillan and M. J. Shelley (2022)</span><br/>
-  <span class="pub-journal"><em>Physical Review X</em></span><br/>
-  <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-3')">ABSTRACT</button>
-  <a class="pub-btn pub-btn-doi" href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.12.041033" target="_blank">DOI</a>
-  <div id="abs-3" class="pub-abstract">
-    <div class="pub-abstract-text">
-      The large-scale organization of the genome inside the cell nucleus is critical for the cell's function. Chromatin—the functional form of DNA in cells—serves as a template for active nuclear processes such as transcription, replication, and DNA repair. Chromatin's spatial organization directly affects its accessibility by ATP-powered enzymes, e.g., RNA polymerase II in the case of transcription. In differentiated cells, chromatin is spatially segregated into compartments—euchromatin and heterochromatin—the former being largely transcriptionally active and loosely packed, the latter containing mostly silent genes and densely compacted. The euchromatin-heterochromatin segregation is crucial for proper genomic function, yet the physical principles behind it are far from understood. Here, we model the nucleus as filled with hydrodynamically interacting active Zimm chains—chromosomes—and investigate how large heterochromatic regions form and segregate from euchromatin through their complex interactions. Each chromosome presents a block copolymer composed of heterochromatic blocks, capable of cross-linking that increases chromatin's local compaction, and euchromatic blocks, subjected to stochastic force dipoles that capture the microscopic stresses exerted by nuclear ATPases. These active stresses lead to a dynamic self-organization of the genome, with its coherent motions driving some mixing of chromosome territories as well as large-scale heterochromatic segregation through cross-linking of distant genomic regions. We study the stresses and flows that arise in the nucleus during the heterochromatic segregation and identify their signatures in Hi-C proximity maps. Our results reveal the fundamental role of active mechanical processes and hydrodynamic interactions in the kinetics of chromatin compartmentalization and in the emergent large-scale organization of the nucleus.
-    </div>
-  </div>
-  <div><span class="pub-news">&#9733; In News: <a href="https://phys.org/news/2022-12-stresses-hydrodynamics-scientists-uncover-principles.html" target="_blank">phys.org</a> &middot; <a href="https://www.sciencedaily.com/releases/2022/12/221219094934.htm" target="_blank">ScienceDaily</a></span></div>
-</div>
-
-<div class="pub-entry fade-in-section">
-  <span class="pub-number">2.</span>
-  <span class="pub-title">Self-induced hydrodynamic coil-stretch transition of active polymers</span><br/>
-  <span class="pub-authors"><b>A. Mahajan</b> and D. Saintillan (2022)</span><br/>
-  <span class="pub-journal"><em>Physical Review E</em></span><br/>
-  <button class="pub-btn pub-btn-abstract" onclick="toggleAbstract('abs-2')">ABSTRACT</button>
-  <a class="pub-btn pub-btn-doi" href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.105.014608" target="_blank">DOI</a>
-  <div id="abs-2" class="pub-abstract">
-    <div class="pub-abstract-text">
-      We analyze the conformational dynamics and statistical properties of an active polymer model. The polymer is described as a freely jointed bead-rod chain subject to stochastic active force dipoles that act on the suspending solvent where they drive long-ranged fluid flows. Using Langevin simulations of isolated chains in unconfined domains, we show how the coupling of active flows with polymer conformations leads to emergent dynamics. Systems with contractile dipoles behave similarly to passive Brownian chains with enhanced fluctuations due to dipolar flows. In systems with extensile dipoles, however, our simulations uncover an active coil-stretch transition whereby the polymer spontaneously unfolds and stretches out in its own self-induced hydrodynamic flow, and we characterize this transition in terms of a dimensionless activity parameter comparing active dipolar forces to thermal fluctuations. We discuss our findings in the context of the classic coil-stretch transition of passive polymers in extensional flows and complement our simulations with a simple kinetic model for an active trimer.
+      {% if pub.highlight %}
+      <div><span class="pub-news">&#9733; {{ pub.highlight | markdownify | remove: '<p>' | remove: '</p>' }}</span></div>
+      {% endif %}
     </div>
   </div>
 </div>
+{% endfor %}
+{% endfor %}
 
-<!-- ==================== 2015 ==================== -->
-<p class="pub-year-header">2015</p>
-
-<div class="pub-entry fade-in-section">
-  <span class="pub-number">1.</span>
-  <span class="pub-title">On Knudsen-minimum effect and temperature bimodality in a dilute granular Poiseuille flow</span><br/>
-  <span class="pub-authors">M. Alam, <b>A. Mahajan</b> and D. Shivanna (2015)</span><br/>
-  <span class="pub-journal"><em>Journal of Fluid Mechanics</em></span><br/>
-  <a class="pub-btn pub-btn-doi" href="https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/abs/on-knudsenminimum-effect-and-temperature-bimodality-in-a-dilute-granular-poiseuille-flow/7AFC5869E39B2C93646D14C0E0A6A6B2" target="_blank">DOI</a>
-</div>
-
-<!-- ==================== THESES ==================== -->
+{% comment %}
+  ──────────────────────────────────────────────────────────────
+  SECTION 3 — Theses / Dissertations
+  ──────────────────────────────────────────────────────────────
+{% endcomment %}
+{% assign theses = site.data.publist | where: "status", "thesis" %}
+{% if theses.size > 0 %}
 <p class="pub-year-header">Thesis / Dissertations</p>
 
+{% for pub in theses %}
 <div class="pub-entry fade-in-section">
-  <span class="pub-title">From nano to micro: activity-driven self-organization of interphase chromatin</span><br/>
-  <span class="pub-authors"><b>Ph.D.</b> &mdash; University of California San Diego, 2021</span><br/>
-  <a class="pub-btn pub-btn-pdf" href="https://drive.google.com/file/d/15gqteb_ZbUaPpy9zL3fBQ0A40p5du3nH/view?usp=share_link" target="_blank">PDF</a>
+  <div class="pub-row">
+    {% if pub.thumbnail != "" and pub.thumbnail %}
+    <img class="pub-thumb" src="{{ pub.thumbnail }}" alt="{{ pub.title }}"/>
+    {% endif %}
+    <div class="pub-body">
+      <span class="pub-title">{{ pub.title }}</span><br/>
+      <span class="pub-authors">{{ pub.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span><br/>
+      {% if pub.pdf != "" and pub.pdf %}
+      <a class="pub-btn pub-btn-pdf" href="{{ pub.pdf }}" target="_blank">PDF</a>
+      {% endif %}
+      {% if pub.doi != "" and pub.doi %}
+      <a class="pub-btn pub-btn-doi" href="{{ pub.doi }}" target="_blank">DOI</a>
+      {% endif %}
+    </div>
+  </div>
 </div>
-
-<div class="pub-entry fade-in-section">
-  <span class="pub-title">Two problems on driven granular matter: Poiseuille and Taylor-Couette flows</span><br/>
-  <span class="pub-authors"><b>Masters</b> &mdash; Jawaharlal Nehru Centre for Advanced Scientific Research, 2016</span><br/>
-  <a class="pub-btn pub-btn-pdf" href="https://drive.google.com/file/d/1g2L0fXPU-j_D4lAJKOMr5RD8WQgTqtnV/view?usp=share_link" target="_blank">PDF</a>
-</div>
+{% endfor %}
+{% endif %}
 
 <!-- ======== ABSTRACT TOGGLE SCRIPT ======== -->
 <script>
