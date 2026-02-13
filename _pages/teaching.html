@@ -11,28 +11,28 @@ classes: wide
     font-family: 'Nunito Sans', 'Avenir Next', sans-serif;
     font-style: italic;
     font-weight: 300;
-    color: #888;
+    color: var(--text-muted, #888);
     font-size: 0.95em;
     margin-bottom: 28px;
     padding-left: 14px;
-    border-left: 3px solid #e9ecef;
+    border-left: 3px solid var(--border, #e9ecef);
   }
   .teaching-card {
     margin-bottom: 16px;
     padding: 16px 18px;
-    border-left: 3px solid #784e51;
+    border-left: 3px solid var(--accent, #784e51);
     border-radius: 4px;
-    background: #fdfdfd;
+    background: var(--card-bg, #fdfdfd);
     transition: background 0.2s ease, box-shadow 0.2s ease;
   }
   .teaching-card:hover {
-    background: #f7f4f4;
-    box-shadow: 0 2px 8px rgba(120, 78, 81, 0.08);
+    background: var(--card-hover, #f7f4f4);
+    box-shadow: 0 2px 8px var(--card-shadow, rgba(120, 78, 81, 0.08));
   }
   .teaching-title {
     font-family: 'Nunito Sans', 'Avenir Next', sans-serif;
     font-weight: 600;
-    color: #893636;
+    color: var(--heading, #893636);
     font-size: 1.05em;
   }
   .teaching-badge {
@@ -48,16 +48,20 @@ classes: wide
     margin-left: 8px;
     position: relative;
     top: -1px;
-    background: #784e51;
+    background: var(--accent, #784e51);
     color: #fff;
   }
   .teaching-meta {
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
-    color: #555;
+    color: var(--text-light, #555);
     font-size: 0.92em;
     margin-top: 4px;
     line-height: 1.5;
+  }
+  .teaching-meta i {
+    color: var(--accent, #784e51) !important;
+    font-size: 0.85em;
   }
   .teaching-award {
     display: inline-block;
@@ -70,6 +74,10 @@ classes: wide
     padding: 3px 10px;
     border-radius: 12px;
   }
+  [data-theme="dark"] .teaching-award {
+    background: #1e2a4a;
+    color: #7ab3f0;
+  }
 </style>
 
 <p class="teaching-quote">"If you can't explain it in simple terms, you don't understand it well enough."</p>
@@ -77,14 +85,14 @@ classes: wide
 {% assign teaching_sorted = site.teaching | sort: "date" | reverse %}
 
 {% for item in teaching_sorted %}
-<div class="teaching-card">
+<div class="teaching-card fade-in-section">
   <span class="teaching-title">{{ item.title }}</span>
   <span class="teaching-badge">{{ item.type }}</span>
   <div class="teaching-meta">
-    <i class="fas fa-calendar-alt" style="color: #784e51; font-size: 0.85em;"></i>
+    <i class="fas fa-calendar-alt"></i>
     {{ item.season }} {{ item.date | date: "%Y" }}
     &nbsp;&middot;&nbsp;
-    <i class="fas fa-university" style="color: #784e51; font-size: 0.85em;"></i>
+    <i class="fas fa-university"></i>
     {{ item.venue }}
   </div>
   {% if item.notes %}
@@ -94,4 +102,3 @@ classes: wide
   {% endif %}
 </div>
 {% endfor %}
-

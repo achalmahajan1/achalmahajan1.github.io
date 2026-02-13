@@ -1,2 +1,143 @@
 <!-- start custom footer snippets -->
+<style>
+  .custom-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto 24px auto;
+    padding: 0 16px;
+    font-family: 'Nunito Sans', 'Avenir', sans-serif;
+  }
+
+  .custom-footer h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95em;
+    color: #fff;
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+  }
+
+  .custom-footer p,
+  .custom-footer a,
+  .custom-footer li {
+    font-weight: 300;
+    font-size: 0.85em;
+    line-height: 1.7;
+    color: var(--footer-text, #e0dcd8);
+  }
+
+  .custom-footer a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .custom-footer a:hover {
+    color: #fff;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 6px;
+  }
+
+  .footer-links li i {
+    width: 18px;
+    text-align: center;
+    margin-right: 6px;
+    font-size: 0.9em;
+    color: var(--footer-text, #e0dcd8) !important;
+  }
+
+  .footer-social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    gap: 14px;
+  }
+
+  .footer-social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--footer-text, #e0dcd8);
+    font-size: 1em;
+    transition: background 0.25s ease, transform 0.2s ease;
+  }
+
+  .footer-social-icons a:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+  }
+
+  .footer-social-icons a i {
+    color: var(--footer-text, #e0dcd8) !important;
+  }
+
+  .footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1000px;
+    margin: 0 auto 16px auto;
+  }
+
+  @media (max-width: 700px) {
+    .custom-footer {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      text-align: center;
+    }
+    .footer-social-icons {
+      justify-content: center;
+    }
+  }
+</style>
+
+<div class="custom-footer">
+  <!-- Column 1: About -->
+  <div>
+    <h4>Achal Mahajan</h4>
+    <p>Scientist II — Computational Biology &amp; Machine Learning at <a href="https://www.altoslabs.com/" target="_blank">Altos Labs</a>.</p>
+    <p style="margin-top: 8px; font-size: 0.8em; color: rgba(224,220,216,0.6);">Bridging biology, computation, and AI.</p>
+  </div>
+
+  <!-- Column 2: Quick Links -->
+  <div>
+    <h4>Quick Links</h4>
+    <ul class="footer-links">
+      <li><i class="fas fa-home"></i><a href="/">Home</a></li>
+      <li><i class="fas fa-book"></i><a href="/publications/">Publications</a></li>
+      <li><i class="fas fa-microphone-alt"></i><a href="/talks/">Talks</a></li>
+      <li><i class="fas fa-chalkboard-teacher"></i><a href="/teaching/">Teaching</a></li>
+      <li><i class="fas fa-file-alt"></i><a href="/cv/">CV</a></li>
+    </ul>
+  </div>
+
+  <!-- Column 3: Connect -->
+  <div>
+    <h4>Connect</h4>
+    <ul class="footer-links">
+      <li><i class="fas fa-envelope"></i><a href="mailto:achalmahajan7@gmail.com">achalmahajan7@gmail.com</a></li>
+    </ul>
+    <ul class="footer-social-icons">
+      <li><a href="https://scholar.google.com/citations?user=HD8PNBoAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a></li>
+      <li><a href="https://github.com/achalmahajan1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/achal-mahajan-12864937/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://twitter.com/MAHAJANACHAL" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+    </ul>
+  </div>
+</div>
+
+<hr class="footer-divider">
 <!-- end custom footer snippets -->
