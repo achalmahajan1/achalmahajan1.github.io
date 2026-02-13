@@ -3,7 +3,7 @@
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
 
-<!-- Google Fonts: Nunito Sans (closest free match to bratochakra's Avenir) + Barlow for metadata -->
+<!-- Google Fonts: Nunito Sans + Barlow -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,300;1,6..12,400&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
@@ -13,10 +13,62 @@
 
 <style>
   /* ============================================================
-     STYLE for Minimal Mistakes
+     GLOBAL STYLES — Achal Mahajan's Academic Site
+     Light/Dark mode aware  ·  Glassmorphism nav  ·  Smooth anims
      Palette: #784e51 (accent), #893636 (headings),
      #f8f9fa (cards), #333 (text), #FFB6C1 (progress bar)
      ============================================================ */
+
+  /* ---------- CSS CUSTOM PROPERTIES (Light mode defaults) ---------- */
+  :root {
+    --bg: #fff;
+    --bg-secondary: #f8f9fa;
+    --text: #333;
+    --text-muted: #666;
+    --text-light: #555;
+    --accent: #784e51;
+    --heading: #893636;
+    --border: #e9ecef;
+    --card-bg: #fdfdfd;
+    --card-hover: #f7f4f4;
+    --card-shadow: rgba(120, 78, 81, 0.08);
+    --nav-bg: rgba(248, 249, 250, 0.82);
+    --footer-bg: #3d3032;
+    --footer-text: #e0dcd8;
+    --progress: #FFB6C1;
+    --code-bg: #f5f2f0;
+  }
+
+  /* ---------- DARK MODE ---------- */
+  [data-theme="dark"] {
+    --bg: #1a1a2e;
+    --bg-secondary: #16213e;
+    --text: #e0e0e0;
+    --text-muted: #aaa;
+    --text-light: #bbb;
+    --accent: #c17e82;
+    --heading: #e8a0a0;
+    --border: #2a2a4a;
+    --card-bg: #1e1e3a;
+    --card-hover: #252545;
+    --card-shadow: rgba(0, 0, 0, 0.25);
+    --nav-bg: rgba(26, 26, 46, 0.88);
+    --footer-bg: #111122;
+    --footer-text: #ccc;
+    --progress: #c17e82;
+    --code-bg: #1e1e3a;
+  }
+
+  /* ---------- BASE ---------- */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
 
   /* --- TYPOGRAPHY --- */
   body,
@@ -27,7 +79,7 @@
   .page__meta,
   .page__taxonomy {
     font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
+    color: var(--text);
   }
 
   .page__content {
@@ -39,18 +91,18 @@
     text-align: justify;
   }
 
-  /* --- HEADINGS — bratochakra maroon --- */
+  /* --- HEADINGS --- */
   h1, h2, h3, h4, h5, h6,
   .page__title,
   .archive__item-title {
     font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #893636;
+    color: var(--heading);
     font-weight: 600;
   }
 
   h2 {
     padding-bottom: 0.35em;
-    border-bottom: 2px solid #e9ecef;
+    border-bottom: 2px solid var(--border);
     margin-top: 1.8em;
   }
 
@@ -59,54 +111,59 @@
   }
 
   h3 {
-    color: #784e51;
+    color: var(--accent);
   }
 
-  /* --- MASTHEAD / NAVIGATION --- */
+  /* ---------- GLASSMORPHISM MASTHEAD ---------- */
   .masthead {
-    background-color: #f8f9fa;
-    border-bottom: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-    position: relative;
+    background-color: var(--nav-bg) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+    position: sticky !important;
+    top: 0;
+    z-index: 1040;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
   }
 
-  /* Progress bar (bratochakra signature) */
+  /* Progress bar */
   .masthead::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: var(--progress, 0%);
+    width: var(--scroll-progress, 0%);
     height: 3px;
-    background: #FFB6C1;
-    z-index: 1031;
+    background: linear-gradient(90deg, var(--progress), var(--accent));
+    z-index: 1041;
     transition: width 0.1s ease;
   }
 
   .greedy-nav {
-    background: transparent;
+    background: transparent !important;
   }
 
   .greedy-nav a.site-title {
     font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', sans-serif;
     font-weight: 700;
-    color: #784e51;
+    color: var(--accent) !important;
     font-size: 1.1em;
   }
 
   .greedy-nav .visible-links a {
     font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', sans-serif;
-    color: #333;
+    color: var(--text) !important;
     font-weight: 500;
     position: relative;
     transition: color 0.3s ease;
   }
 
   .greedy-nav .visible-links a:hover {
-    color: #784e51;
+    color: var(--accent) !important;
   }
 
-  /* Nav hover underline — bratochakra's signature effect */
+  /* Nav underline effect */
   .greedy-nav .visible-links a::after {
     content: '';
     position: absolute;
@@ -114,7 +171,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #784e51;
+    background-color: var(--accent);
     transition: width 0.3s ease;
   }
 
@@ -122,7 +179,7 @@
     width: 100%;
   }
 
-  /* --- ICONS — all maroon like bratochakra --- */
+  /* --- ICONS --- */
   .author__urls .fas,
   .author__urls .far,
   .author__urls .fa,
@@ -133,10 +190,9 @@
   .sidebar .fa,
   .sidebar .fab,
   .sidebar .ai {
-    color: #784e51 !important;
+    color: var(--accent) !important;
   }
 
-  /* Don't override footer or nav icons */
   .page__footer .fas,
   .page__footer .far,
   .page__footer .fa,
@@ -149,7 +205,7 @@
   .sidebar .author__name {
     font-family: 'Nunito Sans', 'Avenir Next', 'Avenir', sans-serif;
     font-weight: 700;
-    color: #893636;
+    color: var(--heading);
     font-size: 1.1em;
   }
 
@@ -157,7 +213,7 @@
     font-family: 'Nunito Sans', 'Avenir', sans-serif;
     font-weight: 300;
     font-style: italic;
-    color: #666;
+    color: var(--text-muted);
     font-size: 0.9em;
     line-height: 1.5;
   }
@@ -165,23 +221,23 @@
   .author__avatar img {
     border-radius: 50%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid #f8f9fa !important;
+    border: 3px solid var(--bg-secondary) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .author__avatar img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
   }
 
   .author__urls a {
-    color: #333;
+    color: var(--text);
     transition: color 0.2s ease;
     font-weight: 400;
   }
 
   .author__urls a:hover {
-    color: #784e51;
+    color: var(--accent);
   }
 
   .sidebar .author__urls {
@@ -189,44 +245,45 @@
   }
 
   /* --- LINKS --- */
-  .page__content a:not(.btn) {
-    color: #893636;
+  .page__content a:not(.btn):not(.pub-btn) {
+    color: var(--heading);
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    transition: border-bottom-color 0.2s ease;
+    transition: border-bottom-color 0.2s ease, color 0.2s ease;
   }
 
-  .page__content a:not(.btn):hover {
-    border-bottom-color: #893636;
+  .page__content a:not(.btn):not(.pub-btn):hover {
+    border-bottom-color: var(--heading);
   }
 
-  /* --- BUTTONS — warm maroon --- */
+  /* --- BUTTONS --- */
   .btn--inverse {
-    background-color: #784e51;
+    background-color: var(--accent);
     color: #fff;
-    border-color: #784e51;
+    border-color: var(--accent);
     border-radius: 3px;
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 500;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.25s ease, transform 0.2s ease;
   }
 
   .btn--inverse:hover {
     background-color: #5e3c3e;
     color: #fff;
+    transform: translateY(-1px);
   }
 
-  /* --- PUBLICATION LIST --- */
+  /* --- LIST ITEMS --- */
   .page__content li {
     margin-bottom: 0.9em;
     line-height: 1.65;
     font-family: 'Nunito Sans', 'Avenir', sans-serif;
   }
 
-  /* --- ARCHIVE / TALKS / TEACHING ITEMS --- */
+  /* --- ARCHIVE ITEMS --- */
   .archive__item {
     padding: 0.8em 0;
-    border-bottom: 1px solid #f0eeeb;
+    border-bottom: 1px solid var(--border);
   }
 
   .archive__item:last-child {
@@ -236,69 +293,99 @@
   .archive__item-title {
     font-size: 1.1em;
     font-weight: 600;
-    color: #893636;
+    color: var(--heading);
   }
 
   .archive__item-title a {
-    color: #893636;
+    color: var(--heading);
     text-decoration: none;
   }
 
   .archive__item-title a:hover {
-    color: #784e51;
+    color: var(--accent);
   }
 
   .archive__item-excerpt {
     font-family: 'Nunito Sans', 'Avenir Light', sans-serif;
     font-weight: 300;
-    color: #555;
+    color: var(--text-light);
   }
 
-  /* --- NOTICES — light gray like bratochakra cards --- */
+  /* --- NOTICES --- */
   .notice,
   .notice--primary,
   .notice--info {
-    background-color: #f8f9fa;
-    border-left: 4px solid #784e51;
+    background-color: var(--bg-secondary);
+    border-left: 4px solid var(--accent);
     border-radius: 0 4px 4px 0;
   }
 
   /* --- SEARCH --- */
   .search__toggle {
-    color: #784e51;
+    color: var(--accent);
   }
 
   /* --- FOOTER --- */
+  .page__footer {
+    background-color: var(--footer-bg) !important;
+    color: var(--footer-text) !important;
+    transition: background-color 0.4s ease;
+  }
+
+  .page__footer a {
+    color: var(--footer-text);
+  }
+
+  .page__footer a:hover {
+    color: #fff;
+  }
+
   .page__footer-copyright {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 300;
     font-size: 0.85em;
   }
 
-  /* --- PAGE REFINEMENTS --- */
+  .page__footer-follow .social-icons .svg-inline--fa {
+    color: inherit;
+  }
+
+  /* ---------- PAGE ENTRANCE ANIMATION ---------- */
   .page {
-    animation: fadeIn 0.4s ease-in;
+    animation: pageIn 0.5s ease-out;
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* Sidebar — always fully visible, not faded */
+  /* Sidebar — always visible */
   .sidebar {
     opacity: 1 !important;
   }
 
-  /* --- BACK TO TOP BUTTON --- */
-  #back-to-top {
+  /* ---------- SCROLL FADE-IN ANIMATION ---------- */
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+  }
+
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---------- DARK MODE TOGGLE BUTTON ---------- */
+  #dark-mode-toggle {
     position: fixed;
-    bottom: 28px;
+    bottom: 80px;
     right: 28px;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
-    background: #784e51;
+    background: var(--accent);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -306,18 +393,90 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(120, 78, 81, 0.25);
+    box-shadow: 0 2px 10px var(--card-shadow);
+    z-index: 1030;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  #dark-mode-toggle:hover {
+    transform: scale(1.1);
+    background: #5e3c3e;
+  }
+
+  [data-theme="dark"] #dark-mode-toggle:hover {
+    background: #a06568;
+  }
+
+  /* ---------- BACK TO TOP BUTTON ---------- */
+  #back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px var(--card-shadow);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease, background 0.2s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background 0.2s ease, transform 0.2s ease;
     z-index: 1030;
   }
+
   #back-to-top.visible {
     opacity: 1;
     visibility: visible;
   }
+
   #back-to-top:hover {
     background: #5e3c3e;
+    transform: translateY(-2px);
+  }
+
+  /* ---------- CODE BLOCKS (dark mode aware) ---------- */
+  code {
+    background-color: var(--code-bg) !important;
+    color: var(--text) !important;
+    transition: background-color 0.4s ease;
+  }
+
+  /* ---------- INITIAL CONTENT CONTAINER (dark mode) ---------- */
+  .initial-content,
+  .search-content {
+    background-color: var(--bg);
+    transition: background-color 0.4s ease;
+  }
+
+  /* ---------- SELECTION COLOR ---------- */
+  ::selection {
+    background: rgba(120, 78, 81, 0.2);
+    color: var(--text);
+  }
+
+  /* ---------- RESPONSIVE TWEAKS ---------- */
+  @media (max-width: 767px) {
+    #dark-mode-toggle {
+      bottom: 72px;
+      right: 16px;
+      width: 38px;
+      height: 38px;
+      font-size: 16px;
+    }
+
+    #back-to-top {
+      right: 16px;
+      bottom: 20px;
+      width: 38px;
+      height: 38px;
+      font-size: 16px;
+    }
   }
 </style>
 
@@ -334,17 +493,46 @@
 <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
 <meta name="twitter:image" content="{{ site.url }}{{ site.author.avatar }}">
 
-<!-- Scroll progress bar + Back-to-top button -->
+<!-- ============ GLOBAL JAVASCRIPT ============ -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Scroll progress bar
+
+    // ---- DARK MODE ----
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+
+    // Create dark mode toggle button
+    var dmBtn = document.createElement('button');
+    dmBtn.id = 'dark-mode-toggle';
+    dmBtn.setAttribute('aria-label', 'Toggle dark mode');
+    function updateDMIcon() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      dmBtn.innerHTML = isDark
+        ? '<i class="fas fa-sun" style="color:#fff !important;"></i>'
+        : '<i class="fas fa-moon" style="color:#fff !important;"></i>';
+    }
+    updateDMIcon();
+    dmBtn.addEventListener('click', function() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var newTheme = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateDMIcon();
+    });
+    document.body.appendChild(dmBtn);
+
+    // ---- SCROLL PROGRESS BAR ----
     window.addEventListener('scroll', function() {
       var masthead = document.querySelector('.masthead');
       if (!masthead) return;
       var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       var scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-      masthead.style.setProperty('--progress', scrolled + '%');
+      masthead.style.setProperty('--scroll-progress', scrolled + '%');
 
       // Back to top visibility
       var btn = document.getElementById('back-to-top');
@@ -357,15 +545,31 @@
       }
     });
 
-    // Create back-to-top button
-    var btn = document.createElement('button');
-    btn.id = 'back-to-top';
-    btn.setAttribute('aria-label', 'Back to top');
-    btn.innerHTML = '<i class="fas fa-chevron-up"></i>';
-    btn.addEventListener('click', function() {
+    // ---- BACK TO TOP BUTTON ----
+    var topBtn = document.createElement('button');
+    topBtn.id = 'back-to-top';
+    topBtn.setAttribute('aria-label', 'Back to top');
+    topBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
+    topBtn.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    document.body.appendChild(btn);
+    document.body.appendChild(topBtn);
+
+    // ---- SCROLL FADE-IN OBSERVER ----
+    var faders = document.querySelectorAll('.fade-in-section');
+    if (faders.length > 0 && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      faders.forEach(function(el) { observer.observe(el); });
+    } else {
+      // Fallback: just show them all
+      faders.forEach(function(el) { el.classList.add('is-visible'); });
+    }
   });
 </script>
 
