@@ -20,7 +20,7 @@ baseurl                  : ""
 repository               : "achalmahajan1/achalmahajan1.github.io"
 teaser                   :
 logo                     :
-masthead_title           :
+masthead_title           : " "
 words_per_minute         : 200
 
 atom_feed:
