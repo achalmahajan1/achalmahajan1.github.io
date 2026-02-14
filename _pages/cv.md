@@ -129,7 +129,7 @@ classes: wide
   <div class="cv-item">
     <div class="cv-dot"></div>
     <div class="cv-date">2013 – 2016</div>
-    <div class="cv-role">Graduate Masters Student</div>
+    <div class="cv-role">Graduate Research Assistant</div>
     <div class="cv-place">Jawaharlal Nehru Centre for Advanced Scientific Research, Bangalore</div>
   </div>
 </div>
@@ -137,5 +137,121 @@ classes: wide
 
 <h2><i class="fas fa-chalkboard-teacher cv-section-icon"></i>Academic Service</h2>
 
-* **Reviewer**: Physical Review Fluids (2023), New Journal of Physics (2023), ACM-BCB (2023), IEEE-BIBM (2023, 2024), Scientific Reports (2023), NeurIPS-AI4D3 (2023), AAAI-W3PHIAI (2024), ISMB (2024)
-* **Program Chair**: IEEE-BIBM (2023, 2024), AAAI-W3PHIAI (2024), ISMB (2024)
+<style>
+  /* ---- Academic Service Cards ---- */
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 14px;
+  }
+  .service-card {
+    padding: 18px 20px;
+    border-left: 3px solid var(--accent, #784e51);
+    border-radius: 4px;
+    background: var(--card-bg, #fdfdfd);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+  }
+  .service-card:hover {
+    background: var(--card-hover, #f7f4f4);
+    box-shadow: 0 2px 8px var(--card-shadow, rgba(120, 78, 81, 0.08));
+  }
+  .service-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .service-card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent, #784e51), #a0696c);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85em;
+    flex-shrink: 0;
+  }
+  .service-card-title {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    color: var(--heading, #893636);
+    font-size: 1.02em;
+  }
+  .service-venues {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .service-venue {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: var(--bg-secondary, #f8f9fa);
+    border: 1px solid var(--border, #e9ecef);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.82em;
+    font-weight: 500;
+    color: var(--text, #333);
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .service-venue:hover {
+    border-color: var(--accent, #784e51);
+    background: var(--card-hover, #f7f4f4);
+  }
+  .service-venue-year {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: var(--text-muted, #888);
+  }
+
+  /* dark mode adjustments */
+  [data-theme="dark"] .service-card-icon {
+    background: linear-gradient(135deg, #c17e82, #a0696c);
+  }
+
+  @media (max-width: 600px) {
+    .service-venue {
+      font-size: 0.78em;
+      padding: 4px 10px;
+    }
+  }
+</style>
+
+<div class="service-grid fade-in-section">
+
+  <div class="service-card">
+    <div class="service-card-header">
+      <div class="service-card-icon"><i class="fas fa-search"></i></div>
+      <div class="service-card-title">Reviewer</div>
+    </div>
+    <div class="service-venues">
+      <span class="service-venue">Physical Review Fluids <span class="service-venue-year">2023</span></span>
+      <span class="service-venue">New Journal of Physics <span class="service-venue-year">2023</span></span>
+      <span class="service-venue">ACM-BCB <span class="service-venue-year">2023</span></span>
+      <span class="service-venue">IEEE-BIBM <span class="service-venue-year">2023, 2024</span></span>
+      <span class="service-venue">Scientific Reports <span class="service-venue-year">2023</span></span>
+      <span class="service-venue">NeurIPS-AI4D3 <span class="service-venue-year">2023</span></span>
+      <span class="service-venue">AAAI-W3PHIAI <span class="service-venue-year">2024</span></span>
+      <span class="service-venue">ISMB <span class="service-venue-year">2024</span></span>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="service-card-header">
+      <div class="service-card-icon"><i class="fas fa-users-cog"></i></div>
+      <div class="service-card-title">Program Chair</div>
+    </div>
+    <div class="service-venues">
+      <span class="service-venue">IEEE-BIBM <span class="service-venue-year">2023, 2024</span></span>
+      <span class="service-venue">AAAI-W3PHIAI <span class="service-venue-year">2024</span></span>
+      <span class="service-venue">ISMB <span class="service-venue-year">2024</span></span>
+    </div>
+  </div>
+
+</div>
