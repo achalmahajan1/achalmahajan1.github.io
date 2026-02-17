@@ -91,7 +91,7 @@
   display: "Physical Review E"
   doi: "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.105.014608"
   status: "published"
-  thumbnail: ""
+  thumbnail: "/assets/images/papers/Coiled_Polymers.png"
   abstract: "We analyze the conformational dynamics and statistical properties of an active polymer model. The polymer is described as a freely jointed bead-rod chain subject to stochastic active force dipoles that act on the suspending solvent where they drive long-ranged fluid flows. Using Langevin simulations of isolated chains in unconfined domains, we show how the coupling of active flows with polymer conformations leads to emergent dynamics. Systems with contractile dipoles behave similarly to passive Brownian chains with enhanced fluctuations due to dipolar flows. In systems with extensile dipoles, however, our simulations uncover an active coil-stretch transition whereby the polymer spontaneously unfolds and stretches out in its own self-induced hydrodynamic flow, and we characterize this transition in terms of a dimensionless activity parameter comparing active dipolar forces to thermal fluctuations. We discuss our findings in the context of the classic coil-stretch transition of passive polymers in extensional flows and complement our simulations with a simple kinetic model for an active trimer."
 
 # ── 2015 ─────────────────────────────────────────────────────────────────────
