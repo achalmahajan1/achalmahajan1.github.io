@@ -107,7 +107,14 @@ classes: wide
 
   <div class="cv-item">
     <div class="cv-dot"></div>
-    <div class="cv-date">Oct 2022 – Present</div>
+    <div class="cv-date">May 2025 – Present</div>
+    <div class="cv-role">Senior Scientist</div>
+    <div class="cv-place">Altos Labs</div>
+  </div>
+
+  <div class="cv-item">
+    <div class="cv-dot"></div>
+    <div class="cv-date">Oct 2022 – May 2025</div>
     <div class="cv-role">Scientist II</div>
     <div class="cv-place">Altos Labs</div>
   </div>
